@@ -389,6 +389,13 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 				<jdoc:include type="modules" name="position-5" style="default"/>
 			</div>
 		<?php endif;?>
+		<?php if($activePage != $defaultPage) :?>
+			<div class="row main_content">
+				<jdoc:include type="message" />
+			<jdoc:include type="component" />
+			</div>
+			
+		<?php else :?>
 		<div class="row">
 			<div class="modules">
 				<div class="tab-content wow zoomIn">
@@ -511,9 +518,7 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 				</div><!-- Конец /.tab-content ArticleTab -->
 			</div><!-- /.modules -->
 		</div><!-- /.row -->
-		<div class="row">
-
-		</div><!-- /.row -->
+	<?php endif;?>
 		<div class="row part_links">
 			<div class="col-md-4 col-sm-4">
 				<h2>Сервисы оплаты услуг</h2>

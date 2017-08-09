@@ -482,6 +482,18 @@ ul.profil_menu li i{
 			cursor: pointer;
 		}
 
+		.main_menu ul li a.site_map {
+			color: #fff;
+			padding: 10px 15px;
+			-webkit-transition:all .25s;
+			-o-transition:all .25s ;
+			transition:all .25s ;
+			cursor: pointer;
+		}
+		.main_menu ul li a.site_map:hover{
+			color: yellow;
+		}
+
 		.main_menu ul li span.header > i{
 			padding-left: 3px;
 		}
