@@ -46,36 +46,36 @@ if ($doc->countModules('position-0'))
 {
 	$showSearch = TRUE;
 }
+if ($doc->countModules('position-1'))
+{
+	$showPhones = TRUE;
+}
+if ($doc->countModules('position-2'))
+{
+	$showButtons = TRUE;
+}
+if ($doc->countModules('position-3'))
+{
+	$showMessage = TRUE;
+}
 if ($doc->countModules('position-4'))
 {
-	$showMainMenu = TRUE;
+	$showMenu = TRUE;
 }
 if ($doc->countModules('position-5'))
 {
-	$showSlider = TRUE;
+	$showSidebar = TRUE;
 }
 if ($doc->countModules('position-6'))
 {
-	$showTopSliderBanners = TRUE;
-}
-if ($doc->countModules('position-7'))
-{
-	$showNavigator = TRUE;
-}
-if ($doc->countModules('position-8'))
-{
-	$showSidebar = TRUE;
-}
-if ($doc->countModules('position-9'))
-{
 	$showUpBlockAds = TRUE;
 }
-if ($doc->countModules('position-10'))
+if ($doc->countModules('position-7'))
 {
 	$showDownBlockAds = TRUE;
 }
 
-if ($doc->countModules('position-12'))
+if ($doc->countModules('position-8'))
 {
 	$showBottomSliderBanners = TRUE;
 }
@@ -89,7 +89,7 @@ if ($doc->countModules('position-17'))
 }
 // Отключение стандартных скриптов Joomla (Конфликтуют с подключаемыми скриптами шаблона)
 //JHtml::_('jquery.framework');
-//unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
+unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/system/js/core.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery-migrate.min.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery-noconflict.js']);
@@ -216,34 +216,30 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 							<button class="menu_button hidden-sm hidden-md hidden-lg">
 								<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 							</button>
-							<h1 class="hidden-xs wow fadeInDown">SKKO.BY</h1>
+							<a href="/">
+								<h1 class="hidden-xs wow fadeInDown"><?php echo $site_name ?  $site_name : 'SKKO.BY'?></h1>
+							</a>
 						</div>
 						<div class="icon_search visible-sm-block"><i class="fa fa-search fa-2x" aria-hidden="true"></i>
 
 						</div>
-						<div class="top_search hidden-xs">
-							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-							<div class="form_find">
-								<form class="form-inline ">
-									<div class="form-group">
-										<label class="sr-only" for="InputSearch">Поиск</label>
-										<div class="input-group">
-											<input type="text" class="form-control" id="InputSearch" placeholder="Что ищем?" size="150" width="250px">
-											<div class="input-group-addon btn btn-success" type="submit">Найти</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div><!-- /.top_search -->
+						<!-- search module -->
+						<?php if($showSearch):?>
+							<jdoc:include type="modules" name="position-0"/>
+						<?php endif;?>
+						<!-- end search module -->
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-9">
-						<div class="icon_phone">
+						<?php if($showPhones):?>
+							<jdoc:include type="modules" name="position-1" style="phones"/>
+						<!-- <div class="icon_phone">
 							<i class="fa fa-phone-square fa-lg fa-2x" aria-hidden="true"></i>
 						</div>
 						<div class="phones">
 							<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
 							8 (017) 269-18-00, 8 (017) 269-18-09
-						</div>
+						</div> -->
+						<?php endif;?>
 					</div>
 				</div><!-- /.row -->
 			</div>
@@ -253,41 +249,53 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 				<div class="wraper_logo">
 					<div class="col-md-3 col-sm-3 col-xs-4">
 						<div class="logo_img wow bounceInDown" data-wow-delay="0.5s">
-							<a href="/">
-								<img src="img/logo.png" alt="СККО - Система контроля кассового оборудования">
+							<?php if($site_logo) :?>
+							<a href="<?php echo JUri::base();?>">
+								<img src="<?php echo $site_logo ?>" alt="<?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования' ?>">
 							</a>
+						<?php else:?>
+							<a href="<?php echo JUri::base();?>">
+								<img src="<?php echo JUri::base();?>templates/<?php echo $doc->template; ?>/images/logo.png" alt="<?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования' ?>">
+							</a>
+						<?php endif;?>
+
 						</div>
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-8">
 						<div class="logo_text">
 							<div class="logo_title visible-xs-block">
-								<h1><a href="/">SKKO.BY</a></h1>
+								<a href="/"><h1><?php echo $site_name ?  $site_name : 'SKKO.BY'?></h1></a>
 							</div>
 							<div class="greeting wow flipInX">
 								<div class="row">
 									<div class="col-md-9 col-sm-9">
-										<h3>СККО - Система контроля кассового оборудования.</h3>
+										<h3><?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования.' ?></h3> 
 										<span>Управляйте своим бизнесом через Internet</span>
 									</div>
-									<div class="col-md-3 col-sm-3">
-										<a class="btn btn-success " href="#" role="button">
-											<i class="fa fa-key" aria-hidden="true"></i>
-											Войти с ЭЦП
-										</a>
-										<a class="btn btn-success " href="#" role="button"><i class="fa fa-envelope" aria-hidden="true"></i>
-											Почта</a>
+									<?php if ($showButtons):?>
+										<!-- Кнопки Войти с ЭЦП и Почта -->
+										<div class="col-md-3 col-sm-3">
+											<jdoc:include type="modules" name="position-2"/>
 										</div>
-									</div>
-									<div class="row hidden-xs">
-										<div class="notice">
-											<span>Внимание!!!</span>  В связи с техническими работами будут временно недоступны сервисы по формированию отчётов. Приносим свои извинения за доставленные неудобства. <a href="#">Подробнее...</a>
-										</div><!-- end /.notice -->
-									</div>
+										<?php endif;?>
+									</div><!-- /.row -->
+									<?php if($showMessage):?>
+										<div class="row hidden-xs">
+										<!-- Блок Внимание!!! -->
+											<jdoc:include type="modules" name="position-3" style="message"/>
+										</div>
+								<?php endif;?>
 								</div>
 							</div>
 						</div>
 					</div><!-- /.wraper_logo -->
 				</div>
+				
+				<?php if($showMenu):?>
+					<!-- Модуль Меню -->
+					<jdoc:include type="modules" name="position-4" style="default"/>
+				<?php endif;?>
+
 				<div class="row">
 					<div class="col-md-12">
 						<nav class="main_menu hidden-xs affix" data-spy="affix" data-offset-top="250">
@@ -365,11 +373,12 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 						</nav>
 					</div>
 				</div>
+				<?php if($showMessage):?>
 				<div class="row visible-xs">
-					<div class="notice">
-						<span>Внимание!!!</span>  В связи с техническими работами будут временно недоступны сервисы по формированию отчётов. Приносим свои извинения за доставленные неудобства. <a href="#">Подробнее...</a>
-					</div><!-- end /.notice -->
+					<!-- Блок Внимание!!! -->
+					<jdoc:include type="modules" name="position-3" style="message"/>
 				</div>
+			<?php endif;?>
 			</div>
 		</header>
 		<section class="content">
