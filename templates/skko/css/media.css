@@ -245,11 +245,11 @@
 	}
 
 	.main_menu a {
-		padding: 5px 5px;
+		padding: 10px 0px;
 	}
 
 	.main_menu ul li span.header {
-		padding: 5px 7px;
+		padding: 10px 7px;
 	}
 
 	.article_main_widget {

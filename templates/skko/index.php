@@ -68,16 +68,16 @@ if ($doc->countModules('position-5'))
 }
 if ($doc->countModules('position-6'))
 {
-	$showUpBlockAds = TRUE;
+	$showNewsModule = TRUE;
 }
 if ($doc->countModules('position-7'))
 {
-	$showDownBlockAds = TRUE;
+	$showBreadcrumbs  = TRUE;
 }
 
 if ($doc->countModules('position-8'))
 {
-	$showBottomSliderBanners = TRUE;
+	$showSidebar = TRUE;
 }
 if ($doc->countModules('position-14 or position-15 or position-16'))
 {
@@ -295,84 +295,6 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 			<!-- Модуль Меню -->
 			<jdoc:include type="modules" name="position-4" style="default"/>
 		<?php endif;?>
-
-		<div class="row">
-			<div class="col-md-12">
-				<nav class="main_menu hidden-xs affix" data-spy="affix" data-offset-top="250">
-					<ul>
-						<li class="home active">
-							<a href="/" title="Главная">
-								<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-							</a>
-						</li>
-						<li class="dropdown">
-							<span id="dLabe1" class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								О системе
-								<i class="fa fa-caret-down" aria-hidden="true"></i>
-							</span>
-							<ul class="dropdown-menu" aria-labelledby="dLabe1">
-								<li><a href="#">Описание СККО</a></li>
-							</ul>
-						</li>
-						<li class="dropdown active">
-							<span id="dLabe4" class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								Владельцам
-								<i class="fa fa-caret-down" aria-hidden="true"></i>
-							</span>
-							<ul class="dropdown-menu" aria-labelledby="dLabe4">
-								<li><a href="list_articles.html">Порядок заключения договора</a></li>
-								<li class="active"><a href="#">Документы</a></li>
-								<li><a href="#">График подключения кассового оборудования к СККО</a></li>
-								<li><a href="#">Тарифы и способы оплаты</a></li>
-								<li><a href="#">Вопросы/Ответы</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<span id="dLabe3" class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								Публикации
-								<i class="fa fa-caret-down" aria-hidden="true"></i>
-							</span>
-							<ul class="dropdown-menu" aria-labelledby="dLabe3">
-								<li><a href="#">Новости</a></li>
-								<li><a href="#">Нормативные правовые акты</a></li>
-								<li><a href="#">Разъяснения МНС</a></li>
-
-							</ul>
-						</li>
-						<li class="dropdown">
-							<span id="dLabe2" class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								ЦТО
-								<i class="fa fa-caret-down" aria-hidden="true"></i>
-							</span>
-							<ul class="dropdown-menu" aria-labelledby="dLabe2">
-								<li><a href="#">Перечень ЦТО</a></li>
-							</ul>
-						</li>
-
-						<li class="dropdown">
-							<span id="dLabe5" class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								Контакты
-								<i class="fa fa-caret-down" aria-hidden="true"></i>
-							</span>
-							<ul class="dropdown-menu" aria-labelledby="dLabe5">
-								<li><a href="#">Структурные подразделения</a></li>
-								<li><a href="#">Бухгалтерия</a></li>
-								<li><a href="#">График работы</a></li>
-								<li><a href="#">Техническая поддержка</a></li>
-								<li><a href="#">Размещение рекламы</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span id="dLabe6" class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-									Карта сайта
-								</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
 		<?php if($showMessage):?>
 			<div class="row visible-xs">
 				<!-- Блок Внимание!!! -->
@@ -391,134 +313,170 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 		<?php endif;?>
 		<?php if($activePage != $defaultPage) :?>
 			<div class="row main_content">
-				<jdoc:include type="message" />
-			<jdoc:include type="component" />
-			</div>
-			
+					<?php if($showBreadcrumbs):?>
+						<div class="col-md-12">
+							<!-- Модуль Путь ссылок -->
+							<nav class="path_links">
+								<jdoc:include type="modules" name="position-7"/>
+							</nav>
+						</div>
+					<?php endif;?>
+					
+					<?php if($showSidebar):?>
+						<!-- Контент -->
+						<div class="col-md-9">
+								<jdoc:include type="message" />
+								<jdoc:include type="component" />
+						</div>
+						<!-- Сайдбар -->
+						<div class="col-md-3">
+							<!-- Модули Сайдбара -->
+							<div class="block_sidebar">
+								<jdoc:include type="modules" name="position-8"/>
+							</div>	
+						</div>
+					<?php else:?>
+						<!-- Контент -->
+						<div class="col-md-12">
+								<jdoc:include type="message" />
+								<jdoc:include type="component" />
+						</div>
+					<?php endif;?>
+
+					<!-- Путь ссылок -->
+					<?php if($showBreadcrumbs):?>
+							<div class="col-md-12">
+								<!-- Модуль Путь ссылок -->
+								<nav class="path_links">
+									<jdoc:include type="modules" name="position-7"/>
+								</nav>
+							</div>
+					<?php endif;?>
+			</div><!-- /.row main_content -->
 		<?php else :?>
-		<div class="row">
-			<div class="modules">
-				<div class="tab-content wow zoomIn">
-					<div class="tab-pane active" id="post_news">
-						<div class="article-row">
-							<h2>Новости</h2>
-							<div class="col-md-6 col-sm-12 col-xs-12">
-								<div class="article_main_widget">
-									<div>
-										<div class="article_main_img">
-											<a href="#">
-												<img src="img/slider/system_4.jpg" alt="заголовок статьи" title="Подробнее">
-											</a>
-										</div><!-- end /.article_main_img -->
-										<div class="article_main_content">
-											<div class="article_main_header">
-												<div class="data">
-													<span class="day">27</span>
-													<span class="month">Сентября</span>
-													<span class="year">2017</span>
-												</div>
-												<h3>
-													<a href="#">
-														Очень длинный при длинный заголовок статьи. Очень длинный при длинный заголовок статьи.
-													</a>
-												</h3>
-											</div><!-- end /.article_main_header -->
-											<div class="article_main_post">
+			<div class="row">
+				<div class="modules">
+					<div class="tab-content wow zoomIn">
+						<div class="tab-pane active" id="post_news">
+							<div class="article-row">
+								<h2>Новости</h2>
+								<div class="col-md-6 col-sm-12 col-xs-12">
+									<div class="article_main_widget">
+										<div>
+											<div class="article_main_img">
 												<a href="#">
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+													<img src="img/slider/system_4.jpg" alt="заголовок статьи" title="Подробнее">
 												</a>
+											</div><!-- end /.article_main_img -->
+											<div class="article_main_content">
+												<div class="article_main_header">
+													<div class="data">
+														<span class="day">27</span>
+														<span class="month">Сентября</span>
+														<span class="year">2017</span>
+													</div>
+													<h3>
+														<a href="#">
+															Очень длинный при длинный заголовок статьи. Очень длинный при длинный заголовок статьи.
+														</a>
+													</h3>
+												</div><!-- end /.article_main_header -->
+												<div class="article_main_post">
+													<a href="#">
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+													</a>
+												</div>
+											</div><!-- end /.article_main_content -->
+										</div>
+									</div><!-- end /.article_main_widget -->
+								</div>
+								<div class="col-md-6 col-sm-12 col-xs-12">
+									<div class="article_widget">
+										<div class="article_img">
+											<a href="#">
+												<img src="img/slider/system_1.jpg" alt="заголовок статьи" title="Подробнее">
+											</a>
+										</div><!-- end /.article_img -->
+										<div class="article_header">
+											<h3>
+												<a href="#">
+													Очень длинный при длинный заголовок статьи. Очень длинный при длинный заголовок статьи.
+												</a>
+											</h3>
+											<div class="article_data">
+												25 сентября 2017
 											</div>
-										</div><!-- end /.article_main_content -->
-									</div>
-								</div><!-- end /.article_main_widget -->
-							</div>
-							<div class="col-md-6 col-sm-12 col-xs-12">
-								<div class="article_widget">
-									<div class="article_img">
-										<a href="#">
-											<img src="img/slider/system_1.jpg" alt="заголовок статьи" title="Подробнее">
-										</a>
-									</div><!-- end /.article_img -->
-									<div class="article_header">
-										<h3>
-											<a href="#">
-												Очень длинный при длинный заголовок статьи. Очень длинный при длинный заголовок статьи.
+										</div><!-- end /.article_header -->
+										<div class="article_post">
+											<a href="#" alt="">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
 											</a>
-										</h3>
-										<div class="article_data">
-											25 сентября 2017
 										</div>
-									</div><!-- end /.article_header -->
-									<div class="article_post">
-										<a href="#" alt="">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
-										</a>
-									</div>
-								</div><!-- end /.article_widget -->
-								<div class="article_widget">
-									<div class="article_img">
-										<a href="#">
-											<img src="img/slider/system_2.jpg" alt="заголовок статьи" title="Подробнее">
-										</a>
-									</div><!-- end /.article_img -->
-									<div class="article_header">
-										<h3>
+									</div><!-- end /.article_widget -->
+									<div class="article_widget">
+										<div class="article_img">
 											<a href="#">
-												Заголовок статьи.
+												<img src="img/slider/system_2.jpg" alt="заголовок статьи" title="Подробнее">
 											</a>
-										</h3>
-										<div class="article_data">
-											25 сентября 2017
+										</div><!-- end /.article_img -->
+										<div class="article_header">
+											<h3>
+												<a href="#">
+													Заголовок статьи.
+												</a>
+											</h3>
+											<div class="article_data">
+												25 сентября 2017
+											</div>
+										</div><!-- end /.article_header -->
+										<div class="article_post">
+											<a href="#" alt="">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+											</a>
 										</div>
-									</div><!-- end /.article_header -->
-									<div class="article_post">
-										<a href="#" alt="">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
-										</a>
-									</div>
-								</div><!-- end /.article_widget -->
-								<div class="article_widget">
-									<div class="article_img">
-										<a href="#">
-											<img src="img/slider/system_3.jpg" alt="заголовок статьи" title="Подробнее">
-										</a>
-									</div><!-- end /.article_img -->
-									<div class="article_header">
-										<h3>
+									</div><!-- end /.article_widget -->
+									<div class="article_widget">
+										<div class="article_img">
 											<a href="#">
-												Очень длинный при длинный заголовок статьи. Очень длинный при длинный заголовок статьи.
+												<img src="img/slider/system_3.jpg" alt="заголовок статьи" title="Подробнее">
 											</a>
-										</h3>
-										<div class="article_data">
-											25 сентября 2017
+										</div><!-- end /.article_img -->
+										<div class="article_header">
+											<h3>
+												<a href="#">
+													Очень длинный при длинный заголовок статьи. Очень длинный при длинный заголовок статьи.
+												</a>
+											</h3>
+											<div class="article_data">
+												25 сентября 2017
+											</div>
+										</div><!-- end /.article_header -->
+										<div class="article_post">
+											<a href="#" alt="">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+											</a>
 										</div>
-									</div><!-- end /.article_header -->
-									<div class="article_post">
-										<a href="#" alt="">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione pariatur nihil, voluptatum magni voluptatem voluptate atque nobis tenetur omnis eos quisquam quis nulla animi quia sunt neque, accusamus rem officia.
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci natus commodi voluptates numquam ex debitis quo iste laboriosam rerum iusto provident in earum aut quibusdam, officia at eos nemo recusandae!
+									</div><!-- end /.article_widget -->
+								</div>
+								<div class="col-sm-12 col-xs-12">
+									<div class="all_news">
+										<a class="btn btn-success" href="#" role="button">
+											Смотреть все новости...
 										</a>
-									</div>
-								</div><!-- end /.article_widget -->
-							</div>
-							<div class="col-sm-12 col-xs-12">
-								<div class="all_news">
-									<a class="btn btn-success" href="#" role="button">
-										Смотреть все новости...
-									</a>
-								</div>	
-							</div>
-						</div><!-- end /.article-row -->
-					</div><!-- конец вкладки Новое -->
-				</div><!-- Конец /.tab-content ArticleTab -->
-			</div><!-- /.modules -->
-		</div><!-- /.row -->
-	<?php endif;?>
+									</div>	
+								</div>
+							</div><!-- end /.article-row -->
+						</div><!-- конец вкладки Новое -->
+					</div><!-- Конец /.tab-content ArticleTab -->
+				</div><!-- /.modules -->
+			</div><!-- /.row -->
+		<?php endif;?>
 		<div class="row part_links">
 			<div class="col-md-4 col-sm-4">
 				<h2>Сервисы оплаты услуг</h2>
