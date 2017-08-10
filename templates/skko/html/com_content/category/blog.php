@@ -32,7 +32,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<?php $leadingcount = 0; ?>
+
 	<?php if (!empty($this->lead_items)) : ?>
 		<div class="items-leading clearfix">
 			<?php foreach ($this->lead_items as &$item) : ?>
@@ -42,7 +42,6 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 					echo $this->loadTemplate('item');
 					?>
 				</div>
-				<?php $leadingcount++; ?>
 			<?php endforeach; ?>
 		</div><!-- end items-leading -->
 	<?php endif; ?>
