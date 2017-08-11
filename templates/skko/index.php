@@ -1,13 +1,15 @@
 <?php defined("_JEXEC") or die();?>
 <?php
 $templateparams = JFactory::getApplication()->getTemplate(true)->params;
+$app  = JFactory::getApplication();
+
+$sitename = $app->get('sitename');
 $site_logo = $templateparams->get('site_logo');
 $site_name = $templateparams->get('site_name');
 $site_desc = $templateparams->get('site_desc');
 //print_r($templateparams);
 
 $doc = JFactory::getDocument();
-
 $menu = JFactory::getApplication()->getMenu();
 
 $activePage = $menu->getActive()->id;
@@ -96,10 +98,8 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-core.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/system/js/modal.js']);
-unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
+//unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 //unset($doc->_scripts[JURI::root(true). '/components/com_cobalt/library/tws/js/owl.carousel.min.js']);
-
-//print_r($doc->params);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -110,7 +110,7 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>Сайт SKKO</title>
+	<title><?php echo $sitename; ?></title>
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
