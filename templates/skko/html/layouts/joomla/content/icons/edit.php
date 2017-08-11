@@ -41,5 +41,6 @@ else
 	<?php echo JHtml::_('image', 'system/' . $icon, JText::_('JGLOBAL_EDIT'), null, true); ?>
 <?php else : ?>
 	<span class="hasTooltip icon-<?php echo $icon; ?> tip" title="<?php echo JHtml::tooltipText(JText::_('COM_CONTENT_EDIT_ITEM'), $overlib, 0, 0); ?>"></span>
-	<?php echo JText::_('JGLOBAL_EDIT'); ?>
+	<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+	<?php //echo JText::_('JGLOBAL_EDIT'); ?>
 <?php endif; ?>
