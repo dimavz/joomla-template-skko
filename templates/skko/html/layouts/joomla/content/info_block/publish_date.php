@@ -9,9 +9,8 @@
 
 defined('JPATH_BASE') or die;
 ?>
-			<dd class="published">
-				<span class="icon-calendar" aria-hidden="true"></span>
-				<time datetime="<?php echo JHtml::_('date', $displayData['item']->publish_up, 'c'); ?>" itemprop="datePublished">
-					<?php echo JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', JHtml::_('date', $displayData['item']->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
-				</time>
-			</dd>
+
+<i class="fa fa-calendar fa-lg" aria-hidden="true" title="<?php echo JText::_('COM_CONTENT_PUBLISHED_DATE'); ?>"></i>
+<span id="data_publish" title="<?php echo JText::_('COM_CONTENT_PUBLISHED_DATE'); ?>">
+	<?php echo JText::sprintf(JHtml::_('date', $displayData['item']->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
+</span>

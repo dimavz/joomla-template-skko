@@ -10,9 +10,7 @@
 defined('JPATH_BASE') or die;
 
 ?>
-			<dd class="modified">
-				<span class="icon-calendar" aria-hidden="true"></span>
-				<time datetime="<?php echo JHtml::_('date', $displayData['item']->modified, 'c'); ?>" itemprop="dateModified">
-					<?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', JHtml::_('date', $displayData['item']->modified, JText::_('DATE_FORMAT_LC3'))); ?>
-				</time>
-			</dd>
+<i class="fa fa-calendar-check-o fa-lg" aria-hidden="true" title="<?php echo JText::_('COM_CONTENT_MODIFIED_DATE'); ?>"></i>
+<span id="data_edit" title="<?php echo JText::_('COM_CONTENT_MODIFIED_DATE'); ?>">
+	<?php echo JText::sprintf(JHtml::_('date', $displayData['item']->modified, JText::_('DATE_FORMAT_LC3'))); ?>
+</span>

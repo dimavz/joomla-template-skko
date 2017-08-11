@@ -10,8 +10,7 @@
 defined('JPATH_BASE') or die;
 
 ?>
-			<dd class="hits">
-					<span class="icon-eye-open" aria-hidden="true"></span>
-					<meta itemprop="interactionCount" content="UserPageVisits:<?php echo $displayData['item']->hits; ?>" />
-					<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $displayData['item']->hits); ?>
-			</dd>
+<i class="fa fa-eye fa-lg" aria-hidden="true" title="<?php echo JText::_('COM_CONTENT_ARTICLE_HITS_ALL');?>"></i>
+<span title="<?php echo JText::_('COM_CONTENT_ARTICLE_HITS_ALL');?>">
+	<?php echo JText::sprintf($displayData['item']->hits); ?>
+</span>

@@ -55,5 +55,34 @@ $item = $this->item;
 	<?php endif; ?>
 </div>
 <div class="post_metainfo">
-	
+	<ul>
+	<?php //echo $params->get('show_publish_date');?>
+	<?php if(!empty($params->get('show_create_date'))): ?>
+		<li>
+			<?php echo JLayoutHelper::render('joomla.content.info_block.create_date', array('item' => $this->item, 'params' => $params)); ?>
+		</li>
+	<?php endif;?>
+	<?php if(!empty($params->get('show_publish_date'))): ?>
+		<li>
+			<?php echo JLayoutHelper::render('joomla.content.info_block.publish_date', array('item' => $this->item, 'params' => $params)); ?>
+		</li>
+	<?php endif;?>
+	<?php if(!empty($params->get('show_modify_date'))): ?>
+		<li>
+			<?php echo JLayoutHelper::render('joomla.content.info_block.modify_date', array('item' => $this->item, 'params' => $params)); ?>
+		</li>
+	<?php endif;?>
+	<?php if(!empty($params->get('show_hits'))): ?>
+		<li>
+			<?php echo JLayoutHelper::render('joomla.content.info_block.hits', array('item' => $this->item, 'params' => $params)); ?>
+		</li>
+	<?php endif;?>
+	<?php if(!empty($params->get('show_author'))): ?>
+		<li>
+			<?php echo JLayoutHelper::render('joomla.content.info_block.author', array('item' => $this->item, 'params' => $params)); ?>
+		</li>
+	<?php endif;?>
+	</ul>
+		<?php //print_r($params); ?>
+
 </div>
