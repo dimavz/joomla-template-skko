@@ -41,7 +41,6 @@ $item = $this->item;
 	<div class="post_text">
 		<?php echo $item->introtext; ?>
 	</div>
-	<button class="seemore btn btn-info">
 		<?php if ($params->get('show_readmore') && $this->item->readmore) :
 		if ($params->get('access-view')) :
 			$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
@@ -54,7 +53,6 @@ $item = $this->item;
 		endif; ?>
 		<?php echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
 	<?php endif; ?>
-</button>
 </div>
 <div class="post_metainfo">
 	
