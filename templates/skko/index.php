@@ -356,6 +356,9 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 		<?php else :?>
 			<div class="row">
 				<div class="modules">
+					<?php if($showNewsModule): ?>
+						<jdoc:include type="modules" name="position-6"/>
+					<?php endif; ?>
 					<div class="tab-content wow zoomIn">
 						<div class="tab-pane active" id="post_news">
 							<div class="article-row">

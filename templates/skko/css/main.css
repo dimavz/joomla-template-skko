@@ -413,15 +413,6 @@ ul.profil_menu li i{
 		top:40px;
 	}
 
-/*	.path_links{
-		background-color: #3797BF;
-		color: #fff;
-		width: 100%;
-		padding: 5px;
-		border-bottom-left-radius:1em;
-		border-bottom-right-radius:1em;
-		}*/
-
 		.path_links {
 			background-color: #43484C;
 			border: 1px solid #fff;
@@ -430,6 +421,7 @@ ul.profil_menu li i{
 			color: #fff;
 			padding: 5px;
 			width: 100%;
+			margin-top: 5px;
 		}
 
 		.path_links p{
