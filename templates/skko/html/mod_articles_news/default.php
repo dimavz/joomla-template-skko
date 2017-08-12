@@ -70,7 +70,8 @@ $fl=true;
 						</h3>
 						<div class="article_data">
 							<!-- 25 сентября 2017 -->
-							<?php echo date("d F Y",strtotime($item->publish_up)); ?>
+							<?php //echo date("d F Y",strtotime($item->publish_up)); ?>
+							<?php echo JText::sprintf(JHtml::_('date', $item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
 						</div>
 					</div>
 					<div class="article_post">
