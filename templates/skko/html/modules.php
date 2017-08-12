@@ -61,11 +61,11 @@ function modChrome_footer_left_block($module, &$params, &$attribs)
 	if($module->content){
 		echo '<div class="col-md-4 col-sm-4 col-xs-12">';
 		echo '<div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s">';
-			echo '<h3 class="add_ad" role="button">';
-			echo $module->title;
-			echo '</h3>';
-			echo $module->content;
-			echo '</div>';
+		echo '<h3 class="add_ad" role="button">';
+		echo $module->title;
+		echo '</h3>';
+		echo $module->content;
+		echo '</div>';
 		echo '</div>';
 	}
 }
@@ -74,11 +74,11 @@ function modChrome_footer_center_block($module, &$params, &$attribs)
 	if($module->content){
 		echo '<div class="col-md-4 col-sm-4 col-xs-12">';
 		echo '<div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s">';
-			echo '<h3 class="reclama" role="button">';
-			echo $module->title;
-			echo '</h3>';
-			echo $module->content;
-			echo '</div>';
+		echo '<h3 class="reclama" role="button">';
+		echo $module->title;
+		echo '</h3>';
+		echo $module->content;
+		echo '</div>';
 		echo '</div>';
 	}
 }
@@ -87,11 +87,11 @@ function modChrome_footer_right_block($module, &$params, &$attribs)
 	if($module->content){
 		echo '<div class="col-md-4 col-sm-4 col-xs-12">';
 		echo '<div class="footer_right_block wow fadeInDown" data-wow-delay="0.6s">';
-			echo '<h3 class="contacts" role="button">';
-			echo $module->title;
-			echo '</h3>';
-			echo $module->content;
-			echo '</div>';
+		echo '<h3 class="contacts" role="button">';
+		echo $module->title;
+		echo '</h3>';
+		echo $module->content;
+		echo '</div>';
 		echo '</div>';
 	}
 }
@@ -99,14 +99,14 @@ function modChrome_footer_bottomline($module, &$params, &$attribs)
 {
 	if($module->content){
 		echo '<div class="footer_bottomline">
-						<div class="conteiner">
-							<div class="row">
-								<div class="col-md-12">';
-			echo $module->content;
-			echo '</div>
-					</div>
-						</div>
-							</div>';
+		<div class="conteiner">
+			<div class="row">
+				<div class="col-md-12">';
+					echo $module->content;
+					echo '</div>
+				</div>
+			</div>
+		</div>';
 
 	}
 }
@@ -114,10 +114,10 @@ function modChrome_phones($module, &$params, &$attribs)
 {
 	if($module->content){
 		echo '<div class="icon_phone">
-					<i class="fa fa-phone-square fa-lg fa-2x" aria-hidden="true"></i>
-					</div>
-					<div class="phones">
-					<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>';
+		<i class="fa fa-phone-square fa-lg fa-2x" aria-hidden="true"></i>
+	</div>
+	<div class="phones">
+		<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>';
 		echo strip_tags($module->content);
 		echo '</div>';
 	}
@@ -127,7 +127,7 @@ function modChrome_button_ecp($module, &$params, &$attribs)
 {
 	if($module->content){
 		echo '<a class="btn btn-success " href="https://skko.by/" role="button">
-											<i class="fa fa-key" aria-hidden="true"></i>';
+		<i class="fa fa-key" aria-hidden="true"></i>';
 		echo strip_tags($module->content);
 		echo '</a>';
 	}
@@ -149,5 +149,23 @@ function modChrome_message($module, &$params, &$attribs)
 		echo'<span>Внимание!!!</span>';
 		echo strip_tags($module->content);
 		echo '</div>';
+	}
+}
+
+function modChrome_news($module, &$params, &$attribs)
+{
+	if($module->content){
+		echo '<div class="tab-content wow zoomIn" style="visibility: visible; animation-name: zoomIn;">';
+			echo '<div id="post_news" class="tab-pane active">';
+				echo '<div class="article-row">';
+
+					if ($module->showtitle)
+					{
+						echo "<h2>";
+						echo $module->title; 
+						echo "</h2>";
+					}
+					echo $module->content;
+				echo '</div></div></div>';
 	}
 }
