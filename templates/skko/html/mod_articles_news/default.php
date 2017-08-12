@@ -11,6 +11,10 @@ defined('_JEXEC') or die;
 $fl=true;
 
 ?>
+<pre>
+	<?php //print_r($list); ?>
+</pre>
+	
 	<?php $countNews = 1; ?>
 	<?php foreach ($list as $item) : ?>
 		<?php if ($countNews == 1): ?>
@@ -38,7 +42,7 @@ $fl=true;
 							</div>
 							<div class="article_main_post">
 								<a href="<?php echo $item->link?>">
-									<?php echo $item->introtext; ?>
+									<?php echo  $item->introtext; ?>
 								</a>
 							</div>
 						</div>
@@ -65,7 +69,8 @@ $fl=true;
 								<a href="<?php echo $item->link?>"><?php echo $item->title?></a>
 						</h3>
 						<div class="article_data">
-							25 сентября 2017
+							<!-- 25 сентября 2017 -->
+							<?php echo date("d F Y",strtotime($item->publish_up)); ?>
 						</div>
 					</div>
 					<div class="article_post">
