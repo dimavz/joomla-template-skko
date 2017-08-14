@@ -5,8 +5,8 @@
     <author>Guillermo Vargas</author>
     <copyright>This component is released under the GNU/GPL License</copyright>
     <authorEmail>guille@vargas.co.cr</authorEmail>
-    <authorUrl>http://joomla.vargas.co.cr</authorUrl>
-    <version>2.3.2</version>
+    <authorUrl>http://www.jooxmap.com</authorUrl>
+    <version>2.3.4</version>
     <license>GNU/GPL</license>
     <description>Xmap - Sitemap Generator for Joomla!</description>
     <install folder="admin">
@@ -37,6 +37,9 @@
     <languages folder="front/language">
         <language tag="en-GB">en-GB.com_xmap.ini</language>
         <language tag="es-ES">es-ES.com_xmap.ini</language>
+        <language tag="fa-IR">fa-IR.com_xmap.ini</language>
+        <language tag="cs-CZ">cs-CZ.com_xmap.ini</language>
+        <language tag="nl-NL">nl-NL.com_xmap.ini</language>
         <language tag="ru-RU">ru-RU.com_xmap.ini</language>
     </languages>
     <images folder="admin">
@@ -64,6 +67,12 @@
             <language tag="en-GB">en-GB/en-GB.com_xmap.sys.ini</language>
             <language tag="es-ES">es-ES/es-ES.com_xmap.ini</language>
             <language tag="es-ES">es-ES/es-ES.com_xmap.sys.ini</language>
+            <language tag="fa-IR">fa-IR/fa-IR.com_xmap.ini</language>
+            <language tag="fa-IR">fa-IR/fa-IR.com_xmap.sys.ini</language>
+            <language tag="cs-CZ">cs-CZ/cs-CZ.com_xmap.ini</language>
+            <language tag="cs-CZ">cs-CZ/cs-CZ.com_xmap.sys.ini</language>
+            <language tag="nl-NL">nl-NL/nl-NL.com_xmap.ini</language>
+            <language tag="nl-NL">nl-NL/nl-NL.com_xmap.sys.ini</language>
             <language tag="ru-RU">ru-RU/ru-RU.com_xmap.ini</language>
             <language tag="ru-RU">ru-RU/ru-RU.com_xmap.sys.ini</language>
         </languages>
@@ -71,4 +80,7 @@
             <folder>images</folder>
         </images>
     </administration>
+    <updateservers>
+        <server type="extension" priority="1" name="Xmap Update Site">https://raw.github.com/guilleva/Xmap/master/xmap-update.xml</server>
+    </updateservers>
 </extension>

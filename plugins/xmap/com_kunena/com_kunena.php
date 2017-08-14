@@ -1,13 +1,15 @@
 <?php
 
 /**
- * @author Guillermo Vargas, http://joomla.vargas.co.cr
+ * @author Guillermo Vargas, http://www.jooxmap.com
  * @email guille@vargas.co.cr
  * @version $Id$
  * @package Xmap
  * @license GNU/GPL
  * @description Xmap plugin for Kunena Forum Component.
  */
+
+defined( '_JEXEC' ) or die( 'Restricted access' );
 
 /** Handles Kunena forum structure */
 class xmap_com_kunena {
@@ -19,7 +21,7 @@ class xmap_com_kunena {
     static $profile;
     static $config;
 
-    function prepareMenuItem($node, &$params)
+    static function prepareMenuItem($node, &$params)
     {
         $link_query = parse_url($node->link);
         parse_str(html_entity_decode($link_query['query']), $link_vars);
@@ -35,11 +37,10 @@ class xmap_com_kunena {
         }
     }
 
-    function getTree($xmap, $parent, &$params)
+    static function getTree($xmap, $parent, &$params)
     {
         if ($xmap->isNews) // This component does not provide news content. don't waste time/resources
             return false;
-
 
         // Make sure that we can load the kunena api
         if (!xmap_com_kunena::loadKunenaApi()) {
@@ -78,9 +79,9 @@ class xmap_com_kunena {
 
         $include_topics = JArrayHelper::getValue($params, 'include_topics', 1);
         $include_topics = ( $include_topics == 1
-                || ( $include_topics == 2 && $xmap->view == 'xml')
-                || ( $include_topics == 3 && $xmap->view == 'html')
-                || $xmap->view == 'navigator');
+            || ( $include_topics == 2 && $xmap->view == 'xml')
+            || ( $include_topics == 3 && $xmap->view == 'html')
+            || $xmap->view == 'navigator');
         $params['include_topics'] = $include_topics;
 
         $priority = JArrayHelper::getValue($params, 'cat_priority', $parent->priority);
@@ -92,7 +93,7 @@ class xmap_com_kunena {
 
         $params['cat_priority'] = $priority;
         $params['cat_changefreq'] = $changefreq;
-        $params['groups'] = implode(',', $user->authorisedLevels());
+        $params['groups'] = implode(',', $user->getAuthorisedViewLevels());
 
         $priority = JArrayHelper::getValue($params, 'topic_priority', $parent->priority);
         $changefreq = JArrayHelper::getValue($params, 'topic_changefreq', $parent->changefreq);
@@ -132,7 +133,7 @@ class xmap_com_kunena {
     /*
      * Builds the Kunena's tree
      */
-    function getCategoryTree($xmap, $parent, &$params, $parentCat)
+    static function getCategoryTree($xmap, $parent, &$params, $parentCat)
     {
         $db = JFactory::getDBO();
 
@@ -142,7 +143,7 @@ class xmap_com_kunena {
             $catlink = 'index.php?option=com_kunena&view=category&catid=%s&Itemid='.$parent->id;
             $toplink = 'index.php?option=com_kunena&view=topic&catid=%s&id=%s&Itemid='.$parent->id;
 
-            kimport('kunena.forum.category.helper');
+            // kimport('kunena.forum.category.helper');
             $categories = KunenaForumCategoryHelper::getChildren($parentCat);
         } else {
             $catlink = 'index.php?option=com_kunena&func=showcat&catid=%s&Itemid='.$parent->id;
@@ -184,7 +185,7 @@ class xmap_com_kunena {
         if ($params['include_topics']) {
             if (self::getKunenaMajorVersion() >= '2.0') {
                 // Kunena 2.0+
-                kimport('kunena.forum.topic.helper');
+                // kimport('kunena.forum.topic.helper');
                 // TODO: orderby parameter is missing:
                 $topics = KunenaForumTopicHelper::getLatestTopics($parentCat, 0, $params['limit'], array('starttime', $params['days']));
                 if (count($topics)==2 && is_numeric($topics[0])){
@@ -198,9 +199,10 @@ class xmap_com_kunena {
                     FROM {$params['table_prefix']}_messages t
                     INNER JOIN {$params['table_prefix']}_messages AS m ON t.id = m.thread
                     WHERE t.catid=$parentCat AND t.parent=0
-                        AND t.hold in ({$hold})
+                    AND t.hold in ({$hold})
                     GROUP BY m.`thread`
                     ORDER BY {$params['topics_order']} DESC";
+
                 if ($params['days']) {
                     $query = "SELECT * FROM ($query) as topics WHERE time >= {$params['days']}";
                 }
@@ -254,13 +256,13 @@ class xmap_com_kunena {
             jimport ( 'joomla.application.component.helper' );
             // Check if Kunena component is installed/enabled
             if (! JComponentHelper::isEnabled ( 'com_kunena', true )) {
-                    return false;
+                return false;
             }
 
             // Check if Kunena API exists
             $kunena_api = JPATH_ADMINISTRATOR . '/components/com_kunena/api.php';
             if (! is_file ( $kunena_api ))
-                    return false;
+                return false;
 
             // Load Kunena API
             require_once ($kunena_api);
@@ -273,7 +275,7 @@ class xmap_com_kunena {
     * Based on Matias' version (Thanks)
     * See: http://docs.kunena.org/index.php/Developing_Kunena_Router
     */
-    function getKunenaMajorVersion() {
+    static function getKunenaMajorVersion() {
         static $version;
         if (!$version) {
             if (class_exists('KunenaForum')) {
@@ -289,7 +291,7 @@ class xmap_com_kunena {
         return $version;
     }
 
-    function getTablePrefix() {
+    static function getTablePrefix() {
         $version = self::getKunenaMajorVersion();
         if ($version <= 1.5) {
             return '#__fb';
