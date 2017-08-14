@@ -122,6 +122,11 @@ if ($doc->countModules('position-16'))
 {
 	$showFooterBottomLine = TRUE;
 }
+if ($doc->countModules('position-17'))
+{
+	$showMobileSearch = TRUE;
+}
+
 // Отключение стандартных скриптов Joomla (Конфликтуют с подключаемыми скриптами шаблона)
 //JHtml::_('jquery.framework');
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
@@ -155,18 +160,11 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 			<div class="container">
 				<div class="row">
 					<div class="top_main_menu">
-						<div class="form_search">
-							<form class="form-inline ">
-								<div class="form-group">
-									<label class="sr-only" for="InputFind">Поиск</label>
-									<div class="input-group">
-										<input type="text" class="form-control" id="InputFind" placeholder="Что ищем?">
-										<div class="input-group-addon btn btn-info" type="submit">Найти</div>
-									</div>
+							<?php if($showMobileSearch):?>
+								<div class="form_search">
+									<jdoc:include type="modules" name="position-17"/>
 								</div>
-							</form>
-						</div>
-						
+							<?php endif;?>
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							<div class="panel panel-info">
 								<div class="panel-heading" >
@@ -240,7 +238,6 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 									</div>
 								</div>
 							</div>
-
 						</div>
 
 					</div><!-- /.top_main_menu -->
@@ -265,159 +262,152 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 					<div class="col-md-6 col-sm-6 col-xs-9">
 						<?php if($showPhones):?>
 							<jdoc:include type="modules" name="position-1" style="phones"/>
-						<!-- <div class="icon_phone">
-							<i class="fa fa-phone-square fa-lg fa-2x" aria-hidden="true"></i>
-						</div>
-						<div class="phones">
-							<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
-							8 (017) 269-18-00, 8 (017) 269-18-09
-						</div> -->
-					<?php endif;?>
-				</div>
-			</div><!-- /.row -->
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="wraper_logo">
-				<div class="col-md-3 col-sm-3 col-xs-4">
-					<div class="logo_img wow bounceInDown" data-wow-delay="0.5s">
-						<?php if($site_logo) :?>
-							<a href="<?php echo JUri::base();?>">
-								<img src="<?php echo $site_logo ?>" alt="<?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования' ?>">
-							</a>
-						<?php else:?>
-							<a href="<?php echo JUri::base();?>">
-								<img src="<?php echo JUri::base();?>templates/<?php echo $doc->template; ?>/images/logo.png" alt="<?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования' ?>">
-							</a>
 						<?php endif;?>
-
 					</div>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-8">
-					<div class="logo_text">
-						<div class="logo_title visible-xs-block">
-							<a href="/"><h1><?php echo $site_name ?  $site_name : 'SKKO.BY'?></h1></a>
+				</div><!-- /.row -->
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="wraper_logo">
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="logo_img wow bounceInDown" data-wow-delay="0.5s">
+							<?php if($site_logo) :?>
+								<a href="<?php echo JUri::base();?>">
+									<img src="<?php echo $site_logo ?>" alt="<?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования' ?>">
+								</a>
+							<?php else:?>
+								<a href="<?php echo JUri::base();?>">
+									<img src="<?php echo JUri::base();?>templates/<?php echo $doc->template; ?>/images/logo.png" alt="<?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования' ?>">
+								</a>
+							<?php endif;?>
+
 						</div>
-						<div class="greeting wow flipInX">
-							<div class="row">
-								<div class="col-md-9 col-sm-9">
-									<h3><?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования.' ?></h3> 
-									<span>Управляйте своим бизнесом через Internet</span>
-								</div>
-								<?php if ($showButtons):?>
-									<!-- Кнопки Войти с ЭЦП и Почта -->
-									<div class="col-md-3 col-sm-3">
-										<jdoc:include type="modules" name="position-2"/>
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-8">
+						<div class="logo_text">
+							<div class="logo_title visible-xs-block">
+								<a href="/"><h1><?php echo $site_name ?  $site_name : 'SKKO.BY'?></h1></a>
+							</div>
+							<div class="greeting wow flipInX">
+								<div class="row">
+									<div class="col-md-9 col-sm-9">
+										<h3><?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования.' ?></h3> 
+										<span>Управляйте своим бизнесом через Internet</span>
+									</div>
+									<?php if ($showButtons):?>
+										<!-- Кнопки Войти с ЭЦП и Почта -->
+										<div class="col-md-3 col-sm-3">
+											<jdoc:include type="modules" name="position-2"/>
+										</div>
+									<?php endif;?>
+								</div><!-- /.row -->
+								<?php if($showMessage):?>
+									<div class="row hidden-xs">
+										<!-- Блок Внимание!!! -->
+										<jdoc:include type="modules" name="position-3" style="message"/>
 									</div>
 								<?php endif;?>
-							</div><!-- /.row -->
-							<?php if($showMessage):?>
-								<div class="row hidden-xs">
-									<!-- Блок Внимание!!! -->
-									<jdoc:include type="modules" name="position-3" style="message"/>
-								</div>
-							<?php endif;?>
+							</div>
 						</div>
 					</div>
+				</div><!-- /.wraper_logo -->
+			</div>
+
+			<?php if($showMenu):?>
+				<!-- Модуль Меню -->
+				<jdoc:include type="modules" name="position-4" style="default"/>
+			<?php endif;?>
+			<?php if($showMessage):?>
+				<div class="row visible-xs">
+					<!-- Блок Внимание!!! -->
+					<jdoc:include type="modules" name="position-3" style="message"/>
 				</div>
-			</div><!-- /.wraper_logo -->
+			<?php endif;?>
 		</div>
-
-		<?php if($showMenu):?>
-			<!-- Модуль Меню -->
-			<jdoc:include type="modules" name="position-4" style="default"/>
-		<?php endif;?>
-		<?php if($showMessage):?>
-			<div class="row visible-xs">
-				<!-- Блок Внимание!!! -->
-				<jdoc:include type="modules" name="position-3" style="message"/>
-			</div>
-		<?php endif;?>
-	</div>
-</header>
-<section class="content">
-	<div class="container">
-		<?php if($showBanners):?>
-			<div class="row">
-				<!-- Блок Банеров!!! -->
-				<jdoc:include type="modules" name="position-5" style="default"/>
-			</div>
-		<?php endif;?>
-		<?php if($activePage != $defaultPage) :?>
-			<div class="row main_content">
-				<?php if($showBreadcrumbs):?>
-					<div class="col-md-12">
-						<!-- Модуль Путь ссылок -->
-						<nav class="path_links">
-							<jdoc:include type="modules" name="position-7"/>
-						</nav>
-					</div>
-				<?php endif;?>
-
-				<?php if($showSidebar):?>
-					<!-- Контент -->
-					<div class="col-md-9">
-						<jdoc:include type="message" />
-						<jdoc:include type="component" />
-					</div>
-					<!-- Сайдбар -->
-					<div class="col-md-3">
-						<!-- Модули Сайдбара -->
-						<div class="block_sidebar">
-							<jdoc:include type="modules" name="position-8"/>
-						</div>	
-					</div>
-				<?php else:?>
-					<!-- Контент -->
-					<div class="col-md-12">
-						<jdoc:include type="message" />
-						<jdoc:include type="component" />
-					</div>
-				<?php endif;?>
-
-				<!-- Путь ссылок -->
-				<?php if($showBreadcrumbs):?>
-					<div class="col-md-12">
-						<!-- Модуль Путь ссылок -->
-						<nav class="path_links">
-							<jdoc:include type="modules" name="position-7"/>
-						</nav>
-					</div>
-				<?php endif;?>
-			</div><!-- /.row main_content -->
-		<?php else :?>
-			<div class="row">
-				<div class="modules">
-					<?php if($showNewsModule): ?>
-						<jdoc:include type="modules" name="position-6" style="news"/>
-					<?php endif; ?>
-				</div><!-- /.modules -->
-			</div><!-- /.row -->
-		<?php endif;?>
-		<?php if($showRowModules): ?>
-			<div class="row part_links">
-				<?php if($showLeftModule): ?>
-					<jdoc:include type="modules" name="position-10" style="left_block"/>
-				<?php endif;?>
-				<?php if($showCenterModule): ?>
-					<jdoc:include type="modules" name="position-11" style="center_block"/>
-				<?php endif;?>
-				<?php if($showRightModule): ?>
-					<jdoc:include type="modules" name="position-12" style="right_block"/>
-				<?php endif;?>
-			</div><!-- /.row part_links-->
-		<?php endif;?>
-	</div><!-- /.container -->
-</section>
-<footer class="wow pulse">
-	<div class="main_footer">
-		<div class="footer_subscribe">
-			<div class="container">
+	</header>
+	<section class="content">
+		<div class="container">
+			<?php if($showBanners):?>
 				<div class="row">
-					<?php if($showSubscribeModule): ?>
-						<jdoc:include type="modules" name="position-9"/>
+					<!-- Блок Банеров!!! -->
+					<jdoc:include type="modules" name="position-5" style="default"/>
+				</div>
+			<?php endif;?>
+			<?php if($activePage != $defaultPage) :?>
+				<div class="row main_content">
+					<?php if($showBreadcrumbs):?>
+						<div class="col-md-12">
+							<!-- Модуль Путь ссылок -->
+							<nav class="path_links">
+								<jdoc:include type="modules" name="position-7"/>
+							</nav>
+						</div>
 					<?php endif;?>
+
+					<?php if($showSidebar):?>
+						<!-- Контент -->
+						<div class="col-md-9">
+							<jdoc:include type="message" />
+							<jdoc:include type="component" />
+						</div>
+						<!-- Сайдбар -->
+						<div class="col-md-3">
+							<!-- Модули Сайдбара -->
+							<div class="block_sidebar">
+								<jdoc:include type="modules" name="position-8"/>
+							</div>	
+						</div>
+					<?php else:?>
+						<!-- Контент -->
+						<div class="col-md-12">
+							<jdoc:include type="message" />
+							<jdoc:include type="component" />
+						</div>
+					<?php endif;?>
+
+					<!-- Путь ссылок -->
+					<?php if($showBreadcrumbs):?>
+						<div class="col-md-12">
+							<!-- Модуль Путь ссылок -->
+							<nav class="path_links">
+								<jdoc:include type="modules" name="position-7"/>
+							</nav>
+						</div>
+					<?php endif;?>
+				</div><!-- /.row main_content -->
+			<?php else :?>
+				<div class="row">
+					<div class="modules">
+						<?php if($showNewsModule): ?>
+							<jdoc:include type="modules" name="position-6" style="news"/>
+						<?php endif; ?>
+					</div><!-- /.modules -->
+				</div><!-- /.row -->
+			<?php endif;?>
+			<?php if($showRowModules): ?>
+				<div class="row part_links">
+					<?php if($showLeftModule): ?>
+						<jdoc:include type="modules" name="position-10" style="left_block"/>
+					<?php endif;?>
+					<?php if($showCenterModule): ?>
+						<jdoc:include type="modules" name="position-11" style="center_block"/>
+					<?php endif;?>
+					<?php if($showRightModule): ?>
+						<jdoc:include type="modules" name="position-12" style="right_block"/>
+					<?php endif;?>
+				</div><!-- /.row part_links-->
+			<?php endif;?>
+		</div><!-- /.container -->
+	</section>
+	<footer class="wow pulse">
+		<div class="main_footer">
+			<div class="footer_subscribe">
+				<div class="container">
+					<div class="row">
+						<?php if($showSubscribeModule): ?>
+							<jdoc:include type="modules" name="position-9"/>
+						<?php endif;?>
 									<!-- <form class="form-inline">
 										<div class="form-group">
 											<label for="Name">Имя:</label>

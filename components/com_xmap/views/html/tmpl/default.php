@@ -61,6 +61,7 @@ if ($this->displayer->canEdit) {
 }
 ?>
 <div id="xmap">
+<div class="list_posts">
 <?php if ($params->get('show_page_heading', 1) && $params->get('page_heading') != '') : ?>
     <h1>
         <?php echo $this->escape($params->get('page_heading')); ?>
@@ -100,4 +101,5 @@ if ($this->displayer->canEdit) {
 <?php endif; ?>
 
     <span class="article_separator">&nbsp;</span>
+</div>
 </div>

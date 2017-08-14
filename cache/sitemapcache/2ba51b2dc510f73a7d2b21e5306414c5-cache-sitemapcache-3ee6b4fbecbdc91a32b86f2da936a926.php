@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:32954:"<!DOCTYPE html>
+<?php die("Access Denied"); ?>#x#s:26629:"<!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
@@ -11,12 +11,13 @@
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<base href="http://skko.loc:81/sitemap" />
+	<base href="http://skko.loc:81/karta-sajta" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="title" content="СККО - Система контроля кассового оборудования - Карта сайта" />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
 	<title>СККО - Система контроля кассового оборудования - Карта сайта</title>
-	<link href="http://skko.loc:81/component/search/?Itemid=130&amp;format=opensearch" rel="search" title="Искать СККО - Система контроля кассового оборудования" type="application/opensearchdescription+xml" />
+	<link href="http://skko.loc:81/component/search/?Itemid=122&amp;format=opensearch" rel="search" title="Искать СККО - Система контроля кассового оборудования" type="application/opensearchdescription+xml" />
+	<link href="http://skko.loc:81/components/com_xmap/assets/css/xmap.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/favicon.png" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/libs/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
@@ -30,19 +31,21 @@
 	<link href="http://skko.loc:81/templates/skko/css/media.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/css/animate.min.css" rel="stylesheet" type="text/css" />
 	<link href="/modules/mod_google_map/css/map.css" rel="stylesheet" type="text/css" />
-	<script type="application/json" class="joomla-script-options new">{"system.paths":{"root":"","base":""},"system.keepalive":{"interval":840000,"uri":"\/component\/ajax\/?format=json"}}</script>
+	<style type="text/css">
+
+#blankBM88{overflow:hidden;width:100%;
+background:#}
+	</style>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=ru&key= AIzaSyDWR6UzikXViS-E4uirJZAGOb7KD2U5eE8" type="text/javascript"></script>
 	<script src="/media/jui/js/jquery.min.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
 	<script src="/media/jui/js/jquery-noconflict.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
 	<script src="/media/jui/js/jquery-migrate.min.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
 	<script src="/media/jui/js/bootstrap.min.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
-	<script src="/media/system/js/core.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
-	<!--[if lt IE 9]><script src="/media/system/js/polyfill.event.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script><![endif]-->
-	<script src="/media/system/js/keepalive.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
 	<script src="/media/system/js/html5fallback.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
 	<script type="text/javascript">
 jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
+	
 
 </head>
 <body>
@@ -156,7 +159,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 													<div class="top_search">
 	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 	<div class="form_find">
-		<form action="/sitemap" method="post" class="form-inline">
+		<form action="/karta-sajta" method="post" class="form-inline">
 			<div class="form-group">
 				<label class="sr-only" for="mod-search-searchword87">Поиск</label>
 				<div class="input-group">
@@ -167,7 +170,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 	
 			<input type="hidden" name="task" value="search" />
 			<input type="hidden" name="option" value="com_search" />
-			<input type="hidden" name="Itemid" value="130" />
+			<input type="hidden" name="Itemid" value="122" />
 		</form>
 	</div><!-- end /.form_find -->
 </div>
@@ -180,13 +183,6 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 	<div class="phones">
 		<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>	8 (017) 269-18-00, 8 (017) 269-18-09
 </div>
-						<!-- <div class="icon_phone">
-							<i class="fa fa-phone-square fa-lg fa-2x" aria-hidden="true"></i>
-						</div>
-						<div class="phones">
-							<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
-							8 (017) 269-18-00, 8 (017) 269-18-09
-						</div> -->
 									</div>
 			</div><!-- /.row -->
 		</div>
@@ -239,8 +235,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 <ul class="dropdown-menu"><li><a href="/about-system/opisanie-skko" >Описание СККО</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Владельцам<i class="fa fa-caret-down" aria-hidden="true"></i></span>
 <ul class="dropdown-menu"><li><a href="/vladeltsam/poryadok-zaklyucheniya-dogovora" >Порядок заключения договора</a></li><li><a href="/vladeltsam/dokumenty" >Документы</a></li><li><a href="/vladeltsam/grafik-podklyucheniya-kassovogo-oborudovaniya-k-skko" >График подключения кассового оборудования к СККО</a></li><li><a href="/vladeltsam/tarify-i-sposoby-oplaty" >Тарифы и способы оплаты</a></li><li><a href="/vladeltsam/voprosy-otvety" >Вопросы/Ответы</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Публикации<i class="fa fa-caret-down" aria-hidden="true"></i></span>
 <ul class="dropdown-menu"><li><a href="/publikatsii/novosti" >Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty" >Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns" >Разъяснения МНС</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ЦТО<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-<ul class="dropdown-menu"><li><a href="/tsto/perechen-tsto" >Перечень ЦТО</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Контакты<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-<ul class="dropdown-menu"><li><a href="/kontakty/strukturnye-podrazdeleniya" >Структурные подразделения</a></li><li><a href="/kontakty/bukhgalteriya" >Бухгалтерия</a></li><li><a href="/kontakty/grafik-raboty" >График работы</a></li><li><a href="/kontakty/tekhnicheskaya-podderzhka" >Техническая поддержка</a></li><li><a href="/kontakty/razmeshchenie-reklamy" >Размещение рекламы</a></li></ul></li><li><a href="/karta-sajta" class="site_map">Карта сайта</a></li></ul></nav>
+<ul class="dropdown-menu"><li><a href="/tsto/perechen-tsto" >Перечень ЦТО</a></li></ul></li><li><a href="/kontakty" >Контакты</a></li><li class=" active"><a href="/karta-sajta" class="site_map">Карта сайта</a></li></ul></nav>
 
 							<div class="row visible-xs">
 				<!-- Блок Внимание!!! -->
@@ -302,11 +297,12 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 					</div>
 				
 									<!-- Контент -->
-					<div class="col-md-9">
+					<div class="col-md-12">
 						<div id="system-message-container">
 	</div>
 
-						<div id="xmap">
+							<div id="xmap">
+<div class="list_posts">
 
 
     
@@ -324,69 +320,12 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 </li><li><span>ЦТО</span>
 <ul class="level_1">
 <li><a href="/tsto/perechen-tsto" title="Перечень ЦТО">Перечень ЦТО</a></li></ul>
-</li><li><span>Контакты</span>
-<ul class="level_1">
-<li><a href="/kontakty/strukturnye-podrazdeleniya" title="Структурные подразделения">Структурные подразделения</a></li><li><a href="/kontakty/bukhgalteriya" title="Бухгалтерия">Бухгалтерия</a></li><li><a href="/kontakty/grafik-raboty" title="График работы">График работы</a></li><li><a href="/kontakty/tekhnicheskaya-podderzhka" title="Техническая поддержка">Техническая поддержка</a></li><li><a href="/kontakty/razmeshchenie-reklamy" title="Размещение рекламы">Размещение рекламы</a></li></ul>
-</li><li><a href="/karta-sajta" title="Карта сайта">Карта сайта</a></li></ul>
+</li><li><a href="/kontakty" title="Контакты">Контакты</a></li><li><a href="/karta-sajta" title="Карта сайта">Карта сайта</a></li></ul>
 
 
     <span class="article_separator">&nbsp;</span>
 </div>
-					</div>
-					<!-- Сайдбар -->
-					<div class="col-md-3">
-						<!-- Модули Сайдбара -->
-						<div class="block_sidebar">
-							<div class='col-xs-6 col-md-12'><div class='wrap_panel'><div class='header_panel'><h3 class='title_panel'>Авторизация</h3></div><div class='body_panel'><form action="/sitemap" method="post" id="login-form" class="form-inline">
-		<div class="userdata">
-		<div id="form-login-username" class="control-group">
-			<div class="controls">
-									<div class="input-prepend">
-						<span class="add-on">
-							<span class="icon-user hasTooltip" title="Логин"></span>
-							<label for="modlgn-username" class="element-invisible">Логин</label>
-						</span>
-						<input id="modlgn-username" type="text" name="username" class="input-small" tabindex="0" size="18" placeholder="Логин" />
-					</div>
-							</div>
-		</div>
-		<div id="form-login-password" class="control-group">
-			<div class="controls">
-									<div class="input-prepend">
-						<span class="add-on">
-							<span class="icon-lock hasTooltip" title="Пароль">
-							</span>
-								<label for="modlgn-passwd" class="element-invisible">Пароль							</label>
-						</span>
-						<input id="modlgn-passwd" type="password" name="password" class="input-small" tabindex="0" size="18" placeholder="Пароль" />
-					</div>
-							</div>
-		</div>
-						<div id="form-login-remember" class="control-group checkbox">
-			<label for="modlgn-remember" class="control-label">Запомнить меня</label> <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
-		</div>
-				<div id="form-login-submit" class="control-group">
-			<div class="controls">
-				<button type="submit" tabindex="0" name="Submit" class="btn btn-primary login-button">Войти</button>
-			</div>
-		</div>
-					<ul class="unstyled">
-							<li>
-					<a href="/component/users/?view=remind&amp;Itemid=101">
-					Забыли логин?</a>
-				</li>
-				<li>
-					<a href="/component/users/?view=reset&amp;Itemid=101">
-					Забыли пароль?</a>
-				</li>
-			</ul>
-		<input type="hidden" name="option" value="com_users" />
-		<input type="hidden" name="task" value="user.login" />
-		<input type="hidden" name="return" value="aHR0cDovL3Nra28ubG9jOjgxL3NpdGVtYXA=" />
-		<input type="hidden" name="c4ab9e9159897969506a3db0ee9eed2e" value="1" />	</div>
-	</form>
-</div></div></div>
-						</div>	
+</div>
 					</div>
 				
 				<!-- Путь ссылок -->
@@ -456,38 +395,21 @@ var mapType =  google.maps.MapTypeId.ROADMAP;
 							</div>
 						</div>
 													<div class="footer_topline">
-							<div class="container">
-								<div class="row">
-																	<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s"><h3 class="add_ad" role="button">Разделы сайта</h3><ul>
-<li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li class=" active"><a href="/sitemap" >Карта сайта</a></li></ul>
+								<div class="container">
+									<div class="row">
+																					<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s"><h3 class="add_ad" role="button">Разделы сайта</h3><ul>
+<li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li><a href="/sitemap" >Карта сайта</a></li></ul>
 </div></div>
-																
-									<!-- <div class="col-md-4 col-sm-4 col-xs-12">
-										<div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s">
-											<h3 class="add_ad" role="button">Разделы сайта</h3>
-											<ul>
-												<li><a href="#">О системе</a></li>
-												<li><a href="#">Владельцам</a></li>
-												<li><a href="#">Публикации</a></li>
-												<li><a href="#">ЦТО</a></li>
-												<li><a href="#">Контакты</a></li>
-												<li><a href="#">Карта сайта</a></li>
-											</ul>
-										</div>
-									</div> -->
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s">
-											<h3 class="reclama" role="button">Разместить рекламу</h3>
-											<div class="rec_content">
-												<p>Здесь Вы можете узнать <a href="/">условия и тарифы по размещению рекламы</a> на нашем сайте.</p>
-												<p>Если у вас возникли дополнительные вопросы или предложения по размещению рекламы, то свяжитесь с нами по указанным контактам и мы постараемся максимально быстро ответить на них.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<div class="footer_right_block wow fadeInDown" data-wow-delay="0.6s">
-											<h3 class="contacts" role="button">Техподдержка 24ч/7д</h3>
-											<div class="contacts_content">
+																															<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Разместить рекламу</h3><div class="rec_content">	<p>Здесь Вы можете узнать <a>условия и тарифы по размещению рекламы</a> на нашем сайте.</p>
+<p>Если у вас возникли дополнительные вопросы или предложения по размещению рекламы, то свяжитесь с нами по указанным контактам и мы постараемся максимально быстро ответить на них.</p>
+</div></div></div>
+																															<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_right_block wow fadeInDown" data-wow-delay="0.6s"><h3 class="contacts" role="button">Техподдержка 24ч/7д</h3>
+<!-- Blank250 Starts Here -->
+<div id="blankBM88" >
+    <div id="holderBM88">
+        <div id="innerBM88">
+            <div>
+                <div class="contacts_content">
 												<div class="mobile">
 													<i class="fa fa-mobile" aria-hidden="true"></i>
 													<span>8 (029) 873-27-15</span>
@@ -505,62 +427,33 @@ var mapType =  google.maps.MapTypeId.ROADMAP;
 													<span>info@skko.by</span>
 												</div>
 											</div>
-										</div>
+            </div>
+            <div>
+            
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blank250 Ends Here --></div></div>
+																			</div><!-- /.row -->
+								</div><!-- /.container -->
+							</div><!-- /.footer_topline -->
+																			<div class="footer_bottomline">
+								<div class="container">
+									<div class="row">
+											<p>Все права защищены. 2016 год.</p>
+<p><span style="font-size: 8pt;"><a href="/administrirovanie">Администрирование</a></span></p>
+
 									</div>
 								</div>
 							</div>
-						</div>
-												<div class="footer_bottomline">
-							<!-- <div class="conteiner"> -->
-							<div class="row">
-								<!-- <div class="col-md-12"> -->
-								<span>Все права защищены. 2016 год.</span>
-								<!-- </div> -->
-							</div>
-							<!-- </div> -->
-						</div>
-						<div class="clearfix"></div>
+												<div class="clearfix"></div>
 					</div>
 				</footer>
 				<div class="hidden">
-					<form action="" id="login" class="login_form">
-						<h3>Вход на сайт</h3>
-						<div class="form-group has-success has-feedback">
-							<label for="inputEmail" class="col-sm-3 control-label">Email</label>
-							<div class="col-sm-10">
-								<input type="email" class="form-control" id="inputEmail" placeholder="Введите Ваш Email" required>
-							</div>
-						</div>
-						<div class="form-group has-success has-feedback">
-							<label for="inputPassword" class="col-sm-3 control-label">Пароль</label>
-							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword" placeholder="Введите Ваш Пароль" required>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox"> Запомнить меня
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								<button type="submit" class="btn btn-success">Войти</button>
-							</div>
-						</div>
-					</form>
-					<form id="register" class="form-horizontal" role="form">
-						<div class="form-group has-success has-feedback">
-							<label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" id="inputSuccess3">
-								<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-							</div>
-						</div>
-					</form>
 				</div>
 	<!--[if lt IE 9]>
 	<script src="/libs/html5shiv/es5-shim.min.js"></script>

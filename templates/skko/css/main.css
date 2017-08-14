@@ -32,7 +32,12 @@ body {
 .form_search .form-inline .input-group-addon{
 	background-color:#4EC698;
 	color: #fff;
-	font-size: 18px;
+	font-size: 20px;
+	position: absolute;
+	top: 0px;
+	left: 186px;
+	width: 80px;
+	z-index: 100;
 }
 
 .top_main_menu{
