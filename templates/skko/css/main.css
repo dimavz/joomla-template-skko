@@ -1492,6 +1492,8 @@ ul.profil_menu li i{
 		.article_main_widget > div{
 			position: absolute;
 			width: 100%;
+			height: 370px;
+			overflow: hidden;
 			top:0;
 			left:0;
 			box-shadow: 0 0 16px rgba(78,198,152, .5);
@@ -1500,6 +1502,8 @@ ul.profil_menu li i{
 		.article_main_widget > div:hover{
 			border: 1px solid #396B62;
 			background-color: #fff;
+			height: 340px;
+			overflow: hidden;
 		}
 
 		.article_main_widget > div:hover .article_main_img {
@@ -1535,6 +1539,7 @@ ul.profil_menu li i{
 
 		.article_main_img{
 			/*border: 1px solid #43484C;*/
+			height: 370px;
 		}
 		.article_main_img img{
 			width: 100%;
