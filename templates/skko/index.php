@@ -81,6 +81,23 @@ if ($doc->countModules('position-8'))
 {
 	$showSidebar = TRUE;
 }
+if ($doc->countModules('position-10'))
+{
+	$showLeftModule = TRUE;
+}
+if ($doc->countModules('position-11'))
+{
+	$showCenterModule = TRUE;
+}
+if ($doc->countModules('position-12'))
+{
+	$showRightModule = TRUE;
+}
+if ($doc->countModules('position-10 or position-11 or position-12'))
+{
+	$showRowModules = TRUE;
+}
+
 if ($doc->countModules('position-14 or position-15 or position-16'))
 {
 	$showFooterModules = TRUE;
@@ -362,28 +379,19 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 				</div><!-- /.modules -->
 			</div><!-- /.row -->
 		<?php endif;?>
-		<div class="row part_links">
-			<div class="col-md-4 col-sm-4">
-				<h2>Сервисы оплаты услуг</h2>
-				<a href="#">
-					<img src="img/baners/pay.jpg" alt="">
-				</a>
-			</div>
-			<div class="col-md-4 col-sm-4">
-				<h2>Сайты партнёры</h2>
-				<ul>
-					<li><a href="http://ckta.by/">Система контроля торговых автоматов</a></li>
-					<li><a href="http://pki.by/">Удостоверяющий центр</a></li>
-					<li><a href="#">Сайт партнёра</a></li>
-					<li><a href="#">Сайт партнёра</a></li>
-					<li><a href="#">Сайт партнёра</a></li>
-				</ul>
-			</div>
-			<div class="col-md-4 col-sm-4">
-				<h2>Местоположение</h2>
-				<a href="#"><img src="img/baners/map.jpg" class="map" alt=""></a>
-			</div> 
-		</div><!-- /.row part_links-->
+		<?php if($showRowModules): ?>
+			<div class="row part_links">
+				<?php if($showLeftModule): ?>
+						<jdoc:include type="modules" name="position-10" style="left_block"/>
+				<?php endif;?>
+				<?php if($showCenterModule): ?>
+						<jdoc:include type="modules" name="position-11" style="center_block"/>
+				<?php endif;?>
+				<?php if($showRightModule): ?>
+						<jdoc:include type="modules" name="position-12" style="right_block"/>
+				<?php endif;?>
+			</div><!-- /.row part_links-->
+		<?php endif;?>
 	</div><!-- /.container -->
 </section>
 <footer class="wow pulse">

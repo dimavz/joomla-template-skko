@@ -18,9 +18,9 @@ function modChrome_default($module, &$params, &$attribs)
 
 		if ($module->showtitle)
 		{
-			echo "<h".$headerLevel.">";
+			echo '<h'.$headerlevel.'>';
 			echo $module->title; 
-			echo "</h".$headerLevel.">";
+			echo "</h".$headerlevel.">";
 		}
 		echo $module->content;
 	}
@@ -55,6 +55,40 @@ function modChrome_empty($module, &$params, &$attribs)
 		echo $module->content;
 	}
 }
+function modChrome_left_block($module, &$params, &$attribs)
+{
+	if($module->content){
+		echo '<div class="col-md-4 col-sm-4">';
+		echo '<h2>';
+		echo $module->title;
+		echo '</h2>';
+		echo $module->content;
+		echo '</div>';
+	}
+}
+function modChrome_center_block($module, &$params, &$attribs)
+{
+	if($module->content){
+		echo '<div class="col-md-4 col-sm-4">';
+		echo '<h2>';
+		echo $module->title;
+		echo '</h2>';
+		echo $module->content;
+		echo '</div>';
+	}
+}
+function modChrome_right_block($module, &$params, &$attribs)
+{
+	if($module->content){
+		echo '<div class="col-md-4 col-sm-4">';
+		echo '<h2>';
+		echo $module->title;
+		echo '</h2>';
+		echo $module->content;
+		echo '</div>';
+	}
+}
+
 
 function modChrome_footer_left_block($module, &$params, &$attribs)
 {
