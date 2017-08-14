@@ -69,6 +69,7 @@ function rus_date() {
 		return strtr(date(func_get_arg(0)), $translate);
 	}
 }
+//print_r($list);
 ?>
 <?php $countNews = 1; ?>
 <?php foreach ($list as $item) : ?>
@@ -130,8 +131,6 @@ function rus_date() {
 						<a href="<?php echo $item->link?>"><?php echo $item->title?></a>
 					</h3>
 					<div class="article_data">
-						<!-- 25 сентября 2017 -->
-						<?php //echo date("d F Y",strtotime($item->publish_up)); ?>
 						<?php echo JText::sprintf(JHtml::_('date', $item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
 					</div>
 				</div>
@@ -146,7 +145,7 @@ function rus_date() {
 </div>
 <div class="col-sm-12 col-xs-12">
 	<div class="all_news">
-		<a class="btn btn-success" href="#" role="button"> Смотреть все новости... </a>
+		<a class="btn btn-success" href="<?php echo $list[0]->category_route; ?>" role="button"> Смотреть все новости... </a>
 	</div>
 </div>
 
