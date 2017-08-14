@@ -81,6 +81,10 @@ if ($doc->countModules('position-8'))
 {
 	$showSidebar = TRUE;
 }
+if ($doc->countModules('position-9'))
+{
+	$showSubscribeModule = TRUE;
+}
 if ($doc->countModules('position-10'))
 {
 	$showLeftModule = TRUE;
@@ -98,11 +102,23 @@ if ($doc->countModules('position-10 or position-11 or position-12'))
 	$showRowModules = TRUE;
 }
 
-if ($doc->countModules('position-14 or position-15 or position-16'))
+if ($doc->countModules('position-13 or position-14 or position-15'))
 {
 	$showFooterModules = TRUE;
 }
-if ($doc->countModules('position-17'))
+if ($doc->countModules('position-13'))
+{
+	$showFooterLeftModules = TRUE;
+}
+if ($doc->countModules('position-14'))
+{
+	$showFooterCenterModules = TRUE;
+}
+if ($doc->countModules('position-15'))
+{
+	$showFooterRightModules = TRUE;
+}
+if ($doc->countModules('position-16'))
 {
 	$showFooterBottomLine = TRUE;
 }
@@ -330,45 +346,45 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 		<?php endif;?>
 		<?php if($activePage != $defaultPage) :?>
 			<div class="row main_content">
-					<?php if($showBreadcrumbs):?>
-						<div class="col-md-12">
-							<!-- Модуль Путь ссылок -->
-							<nav class="path_links">
-								<jdoc:include type="modules" name="position-7"/>
-							</nav>
-						</div>
-					<?php endif;?>
-					
-					<?php if($showSidebar):?>
-						<!-- Контент -->
-						<div class="col-md-9">
-								<jdoc:include type="message" />
-								<jdoc:include type="component" />
-						</div>
-						<!-- Сайдбар -->
-						<div class="col-md-3">
-							<!-- Модули Сайдбара -->
-							<div class="block_sidebar">
-								<jdoc:include type="modules" name="position-8"/>
-							</div>	
-						</div>
-					<?php else:?>
-						<!-- Контент -->
-						<div class="col-md-12">
-								<jdoc:include type="message" />
-								<jdoc:include type="component" />
-						</div>
-					<?php endif;?>
+				<?php if($showBreadcrumbs):?>
+					<div class="col-md-12">
+						<!-- Модуль Путь ссылок -->
+						<nav class="path_links">
+							<jdoc:include type="modules" name="position-7"/>
+						</nav>
+					</div>
+				<?php endif;?>
 
-					<!-- Путь ссылок -->
-					<?php if($showBreadcrumbs):?>
-							<div class="col-md-12">
-								<!-- Модуль Путь ссылок -->
-								<nav class="path_links">
-									<jdoc:include type="modules" name="position-7"/>
-								</nav>
-							</div>
-					<?php endif;?>
+				<?php if($showSidebar):?>
+					<!-- Контент -->
+					<div class="col-md-9">
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
+					<!-- Сайдбар -->
+					<div class="col-md-3">
+						<!-- Модули Сайдбара -->
+						<div class="block_sidebar">
+							<jdoc:include type="modules" name="position-8"/>
+						</div>	
+					</div>
+				<?php else:?>
+					<!-- Контент -->
+					<div class="col-md-12">
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
+				<?php endif;?>
+
+				<!-- Путь ссылок -->
+				<?php if($showBreadcrumbs):?>
+					<div class="col-md-12">
+						<!-- Модуль Путь ссылок -->
+						<nav class="path_links">
+							<jdoc:include type="modules" name="position-7"/>
+						</nav>
+					</div>
+				<?php endif;?>
 			</div><!-- /.row main_content -->
 		<?php else :?>
 			<div class="row">
@@ -382,13 +398,13 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 		<?php if($showRowModules): ?>
 			<div class="row part_links">
 				<?php if($showLeftModule): ?>
-						<jdoc:include type="modules" name="position-10" style="left_block"/>
+					<jdoc:include type="modules" name="position-10" style="left_block"/>
 				<?php endif;?>
 				<?php if($showCenterModule): ?>
-						<jdoc:include type="modules" name="position-11" style="center_block"/>
+					<jdoc:include type="modules" name="position-11" style="center_block"/>
 				<?php endif;?>
 				<?php if($showRightModule): ?>
-						<jdoc:include type="modules" name="position-12" style="right_block"/>
+					<jdoc:include type="modules" name="position-12" style="right_block"/>
 				<?php endif;?>
 			</div><!-- /.row part_links-->
 		<?php endif;?>
@@ -399,6 +415,9 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 		<div class="footer_subscribe">
 			<div class="container">
 				<div class="row">
+					<?php if($showSubscribeModule): ?>
+						<jdoc:include type="modules" name="position-9"/>
+					<?php endif;?>
 									<!-- <form class="form-inline">
 										<div class="form-group">
 											<label for="Name">Имя:</label>
@@ -413,115 +432,37 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 								</div>
 							</div>
 						</div>
-						<div class="footer_topline">
-							<div class="container">
-								<div class="row">
-									<!-- <div class="col-md-12"> -->
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s">
-									<!-- <button id="add_ad" class="btn btn-success hidden-md hidden-lg">
-										<i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-										<span>Подать объявление</span>
-									</button> -->
-									<h3 class="add_ad" role="button">Разделы сайта</h3>
-									<ul>
-										<li><a href="#">О системе</a></li>
-										<li><a href="#">Владельцам</a></li>
-										<li><a href="#">Публикации</a></li>
-										<li><a href="#">ЦТО</a></li>
-										<li><a href="#">Контакты</a></li>
-										<li><a href="#">Карта сайта</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12">
-								<div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s">
-									<h3 class="reclama" role="button">Разместить рекламу</h3>
-									<div class="rec_content">
-										<p>Здесь Вы можете узнать <a href="">условия и тарифы по размещению рекламы</a> на нашем сайте.</p>
-										<p>Если у вас возникли дополнительные вопросы или предложения по размещению рекламы, то свяжитесь с нами по указанным контактам и мы постараемся максимально быстро ответить на них.</p>
+						<?php if($showFooterModules): ?>
+							<div class="footer_topline">
+								<div class="container">
+									<div class="row">
+										<?php if($showFooterLeftModules): ?>
+											<jdoc:include type="modules" name="position-13" style="footer_left_block"/>
+										<?php endif;?>
+										<?php if($showFooterCenterModules): ?>
+											<jdoc:include type="modules" name="position-14" style="footer_center_block"/>
+										<?php endif;?>
+										<?php if($showFooterRightModules): ?>
+											<jdoc:include type="modules" name="position-15" style="footer_right_block"/>
+										<?php endif;?>
+									</div><!-- /.row -->
+								</div><!-- /.container -->
+							</div><!-- /.footer_topline -->
+						<?php endif;?>
+						<?php if($showFooterBottomLine): ?>
+							<div class="footer_bottomline">
+								<div class="container">
+									<div class="row">
+										<jdoc:include type="modules" name="position-16"/>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 col-sm-4 col-xs-12">
-								<div class="footer_right_block wow fadeInDown" data-wow-delay="0.6s">
-									<h3 class="contacts" role="button">Техподдержка 24ч/7д</h3>
-									<div class="contacts_content">
-										<div class="mobile">
-											<i class="fa fa-mobile" aria-hidden="true"></i>
-											<span>8 (029) 873-27-15</span>
-										</div>
-										<div class="mobile">
-											<i class="fa fa-mobile" aria-hidden="true"></i>
-											<span>8 (029) 873-57-81</span>
-										</div>
-										<div class="mobile">
-											<i class="fa fa-mobile" aria-hidden="true"></i>
-											<span>8 (025) 694-78-61</span>
-										</div>
-										<div class="email">
-											<i class="fa fa-envelope" aria-hidden="true"></i>
-											<span>info@skko.by</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- </div> -->
-						</div>
+						<?php endif;?>
+						<div class="clearfix"></div>
 					</div>
+				</footer>
+				<div class="hidden">
 				</div>
-				<div class="footer_bottomline">
-					<!-- <div class="conteiner"> -->
-					<div class="row">
-						<!-- <div class="col-md-12"> -->
-						<span>Все права защищены. 2016 год.</span>
-						<!-- </div> -->
-					</div>
-					<!-- </div> -->
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</footer>
-		<div class="hidden">
-			<form action="" id="login" class="login_form">
-				<h3>Вход на сайт</h3>
-				<div class="form-group has-success has-feedback">
-					<label for="inputEmail" class="col-sm-3 control-label">Email</label>
-					<div class="col-sm-10">
-						<input type="email" class="form-control" id="inputEmail" placeholder="Введите Ваш Email" required>
-					</div>
-				</div>
-				<div class="form-group has-success has-feedback">
-					<label for="inputPassword" class="col-sm-3 control-label">Пароль</label>
-					<div class="col-sm-10">
-						<input type="password" class="form-control" id="inputPassword" placeholder="Введите Ваш Пароль" required>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox"> Запомнить меня
-							</label>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-success">Войти</button>
-					</div>
-				</div>
-			</form>
-			<form id="register" class="form-horizontal" role="form">
-				<div class="form-group has-success has-feedback">
-					<label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" id="inputSuccess3">
-						<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-					</div>
-				</div>
-			</form>
-		</div>
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>

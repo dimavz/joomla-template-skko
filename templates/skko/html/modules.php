@@ -111,7 +111,9 @@ function modChrome_footer_center_block($module, &$params, &$attribs)
 		echo '<h3 class="reclama" role="button">';
 		echo $module->title;
 		echo '</h3>';
+		echo'<div class="rec_content">';
 		echo $module->content;
+		echo '</div>';
 		echo '</div>';
 		echo '</div>';
 	}
