@@ -1000,6 +1000,12 @@ ul.profil_menu li i{
 		.part_links ul li a{
 			color:#396B62;
 		}
+		.part_links .map{
+			padding: 0;
+		}
+		.map{
+			padding: 0;
+		}
 
 		.list_posts {
 			background-color: #fff;
