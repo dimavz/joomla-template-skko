@@ -194,6 +194,9 @@ ul.profil_menu li i{
 	font-size: 48px;
 	display: inline-block;
 }
+.top_brand h1:hover{
+	color: yellow;
+}
 
 .menu_button{
 	background-color: transparent;
@@ -249,8 +252,17 @@ ul.profil_menu li i{
 	}
 
 	.form_find .form-group .input-group-addon{
+		position: absolute;
+		right: 0px;
+		top: 0;
+		height: 34px;
 		background-color: #4EC698;
+		/*border:.5px solid yellow;*/
 		color: #fff;
+		z-index: 100;
+	}
+	.form_find .form-group .input-group-addon:hover{
+		color: yellow;
 	}
 
 	.top_login{
@@ -997,6 +1009,10 @@ ul.profil_menu li i{
 			margin-top: 20px;
 			padding: 5px;
 		}
+		.subheading-category{
+			color:#396B62;
+			padding-left: 10px;
+		}
 
 		.post{
 			border: #4EC698 1px dashed;
@@ -1047,7 +1063,7 @@ ul.profil_menu li i{
 		.post_image img{
 			max-width: 250px;
 			max-height: 200px;
-			margin-right: 20px;
+			margin-right: 40px;
 			margin-bottom: 20px;
 			box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 			border:1px solid #43484C ;
@@ -1057,6 +1073,9 @@ ul.profil_menu li i{
 			display: block;
 			margin-bottom: 60px;
 			min-height:200px;
+		}
+		.post_text h3{
+			margin-top: 0;
 		}
 		.post_info{
 			position: relative;
@@ -1082,7 +1101,7 @@ ul.profil_menu li i{
 		}
 
 		.post_metainfo {
-			border: 2px solid #396B62;
+			border: 1px solid #396B62;
 			box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 			margin-bottom: 10px;
 		}

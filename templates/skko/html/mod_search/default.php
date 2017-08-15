@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 // Including fallback code for the placeholder attribute in the search field.
-JHtml::_('jquery.framework');
+//JHtml::_('jquery.framework');
 JHtml::_('script', 'system/html5fallback.js', array('version' => 'auto', 'relative' => true));
 
 ?>
@@ -22,7 +22,7 @@ JHtml::_('script', 'system/html5fallback.js', array('version' => 'auto', 'relati
 				<label class="sr-only" for="mod-search-searchword<?php echo $module->id ?>">Поиск</label>
 				<div class="input-group">
 					<input type="text" class="form-control" id="mod-search-searchword<?php echo $module->id ?>" placeholder="<?php echo $text ?>" size="150" width="250px">
-					<div class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();">Найти</div>
+					<button class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();">Найти</button>
 				</div><!-- end /.input-group -->
 			</div><!-- end /.form-group -->
 	

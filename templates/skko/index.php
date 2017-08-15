@@ -126,18 +126,22 @@ if ($doc->countModules('position-17'))
 {
 	$showMobileSearch = TRUE;
 }
+if ($doc->countModules('position-18'))
+{
+	$showMobileMenu = TRUE;
+}
+
 
 // Отключение стандартных скриптов Joomla (Конфликтуют с подключаемыми скриптами шаблона)
 //JHtml::_('jquery.framework');
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/system/js/core.js']);
-//unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery-migrate.min.js']);
-//unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery-noconflict.js']);
+unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery-migrate.min.js']);
+unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery-noconflict.js']);
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
-//unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-core.js']);
-//unset($doc->_scripts[JURI::root(true). '/media/system/js/modal.js']);
-//unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
-//unset($doc->_scripts[JURI::root(true). '/components/com_cobalt/library/tws/js/owl.carousel.min.js']);
+unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-core.js']);
+unset($doc->_scripts[JURI::root(true). '/media/system/js/modal.js']);
+unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -160,86 +164,14 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 			<div class="container">
 				<div class="row">
 					<div class="top_main_menu">
-							<?php if($showMobileSearch):?>
-								<div class="form_search">
-									<jdoc:include type="modules" name="position-17"/>
-								</div>
-							<?php endif;?>
-						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-info">
-								<div class="panel-heading" >
-									<h4 class="panel-title">
-										<a href="#">
-											Главная
-										</a>
-									</h4>
-								</div>
+						<?php if($showMobileSearch):?>
+							<div class="form_search">
+								<jdoc:include type="modules" name="position-17"/>
 							</div>
-							<div class="panel panel-info">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a class="collapsed"  data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false">
-											Новости
-										</a>
-									</h4>
-								</div>
-								<div id="collapse2" class="panel-collapse collapse">
-									<div class="panel-body">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-info">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false">
-											Объявления
-											<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse3" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="#">Продать/Купить Хаски</a></li>
-											<li><a href="#">Дрессировка собак</a></li>
-											<li><a href="#">Знакомства для вязки</a></li>
-											<li><a href="#">Медицина и ветеринария</a></li>
-											<li><a href="#">Гроуминг и стрижки</a></li>
-											<li><a href="#">Розыск собаки</a></li>
-											<li><a href="#">Ищу хозяина</a></li>
-											<li><a href="#">Прочее</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="panel panel-info">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false">
-											Полезное
-											<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-										</a>
-									</h4>
-								</div>
-								<div id="collapse4" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="#">Продать/Купить Хаски</a></li>
-											<li><a href="#">Дрессировка собак</a></li>
-											<li><a href="#">Знакомства для вязки</a></li>
-											<li><a href="#">Медицина и ветеринария</a></li>
-											<li><a href="#">Гроуминг и стрижки</a></li>
-											<li><a href="#">Розыск собаки</a></li>
-											<li><a href="#">Ищу хозяина</a></li>
-											<li><a href="#">Прочее</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
+						<?php endif;?>
+						<?php if($showMobileMenu):?>
+								<jdoc:include type="modules" name="position-18"/>
+						<?php endif;?>
 					</div><!-- /.top_main_menu -->
 					<div class="col-md-6 col-sm-6 col-xs-3">
 						<div class="top_brand">
@@ -408,51 +340,40 @@ unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 						<?php if($showSubscribeModule): ?>
 							<jdoc:include type="modules" name="position-9"/>
 						<?php endif;?>
-									<!-- <form class="form-inline">
-										<div class="form-group">
-											<label for="Name">Имя:</label>
-											<input type="text" class="form-control" id="Name" placeholder="Введите ваше Имя">
-										</div>
-										<div class="form-group">
-											<label for="Email">Email:</label>
-											<input type="email" class="form-control" id="Email" placeholder="Введите ваш Email">
-										</div>
-										<button type="submit" class="btn btn-success">Получать новости</button>
-									</form> -->
-								</div>
-							</div>
-						</div>
-						<?php if($showFooterModules): ?>
-							<div class="footer_topline">
-								<div class="container">
-									<div class="row">
-										<?php if($showFooterLeftModules): ?>
-											<jdoc:include type="modules" name="position-13" style="footer_left_block"/>
-										<?php endif;?>
-										<?php if($showFooterCenterModules): ?>
-											<jdoc:include type="modules" name="position-14" style="footer_center_block"/>
-										<?php endif;?>
-										<?php if($showFooterRightModules): ?>
-											<jdoc:include type="modules" name="position-15" style="footer_right_block"/>
-										<?php endif;?>
-									</div><!-- /.row -->
-								</div><!-- /.container -->
-							</div><!-- /.footer_topline -->
-						<?php endif;?>
-						<?php if($showFooterBottomLine): ?>
-							<div class="footer_bottomline">
-								<div class="container">
-									<div class="row">
-										<jdoc:include type="modules" name="position-16"/>
-									</div>
-								</div>
-							</div>
-						<?php endif;?>
-						<div class="clearfix"></div>
 					</div>
-				</footer>
-				<div class="hidden">
 				</div>
+			</div>
+			<?php if($showFooterModules): ?>
+				<div class="footer_topline">
+					<div class="container">
+						<div class="row">
+							<?php if($showFooterLeftModules): ?>
+								<jdoc:include type="modules" name="position-13" style="footer_left_block"/>
+							<?php endif;?>
+							<?php if($showFooterCenterModules): ?>
+								<jdoc:include type="modules" name="position-14" style="footer_center_block"/>
+							<?php endif;?>
+							<?php if($showFooterRightModules): ?>
+								<jdoc:include type="modules" name="position-15" style="footer_right_block"/>
+							<?php endif;?>
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</div><!-- /.footer_topline -->
+			<?php endif;?>
+			<?php if($showFooterBottomLine): ?>
+				<div class="footer_bottomline">
+					<div class="container">
+						<div class="row">
+							<jdoc:include type="modules" name="position-16"/>
+						</div>
+					</div>
+				</div>
+			<?php endif;?>
+			<div class="clearfix"></div>
+		</div>
+	</footer>
+	<div class="hidden">
+	</div>
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
