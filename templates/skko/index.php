@@ -290,12 +290,14 @@ unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 								<jdoc:include type="modules" name="position-8"/>
 							</div>	
 						</div>
+						<div class="clearfix"></div>
 					<?php else:?>
 						<!-- Контент -->
 						<div class="col-md-12">
 							<jdoc:include type="message" />
 							<jdoc:include type="component" />
 						</div>
+						<div class="clearfix"></div>
 					<?php endif;?>
 
 					<!-- Путь ссылок -->
