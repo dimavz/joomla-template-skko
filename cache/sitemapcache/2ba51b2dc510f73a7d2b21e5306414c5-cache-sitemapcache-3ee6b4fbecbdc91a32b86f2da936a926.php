@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:25137:"<!DOCTYPE html>
+<?php die("Access Denied"); ?>#x#s:24538:"<!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
@@ -30,18 +30,18 @@
 	<link href="http://skko.loc:81/templates/skko/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/css/media.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/css/animate.min.css" rel="stylesheet" type="text/css" />
-	<link href="/modules/mod_google_map/css/map.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 
 #blankBM88{overflow:hidden;width:100%;
+background:#}
+#blankBM110{overflow:hidden;width:100%;
 background:#}
 	</style>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=ru&key= AIzaSyDWR6UzikXViS-E4uirJZAGOb7KD2U5eE8" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery.min.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-noconflict.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
-	<script src="/media/jui/js/bootstrap.min.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
-	<script src="/media/system/js/html5fallback.js?33b706488e39798105aab4b6d9622d14" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
+	<script src="/media/system/js/html5fallback.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
 	<script type="text/javascript">
 jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
@@ -147,7 +147,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 																	</div><!-- /.row -->
 																	<div class="row hidden-xs">
 										<!-- Блок Внимание!!! -->
-										<div class="notice"><span>Внимание!!!</span>	Договор оказания услуг СККО и другие документы для его заключения могут быть направлены почтой либо предоставлены нарочным по месту расположения отделов технической поддержки СККО Подробнее...
+										<div class="notice"><span>Внимание!!!</span>	Договор оказания услуг СККО и другие документы могут быть направлены почтой либо предоставлены нарочным по месту расположения отделов технической поддержки СККО Подробнее
 </div>
 									</div>
 															</div>
@@ -167,7 +167,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 
 										<div class="row visible-xs">
 					<!-- Блок Внимание!!! -->
-					<div class="notice"><span>Внимание!!!</span>	Договор оказания услуг СККО и другие документы для его заключения могут быть направлены почтой либо предоставлены нарочным по месту расположения отделов технической поддержки СККО Подробнее...
+					<div class="notice"><span>Внимание!!!</span>	Договор оказания услуг СККО и другие документы могут быть направлены почтой либо предоставлены нарочным по месту расположения отделов технической поддержки СККО Подробнее
 </div>
 				</div>
 					</div>
@@ -255,6 +255,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 </div>
 </div>
 						</div>
+						<div class="clearfix"></div>
 					
 					<!-- Путь ссылок -->
 											<div class="col-md-12">
@@ -285,8 +286,12 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 <li><a href="http://pki.by/" target="_blank" rel="noopener noreferrer">Удостоверяющий центр</a></li>
 </ul>
 </div>
-																<div class="col-md-4 col-sm-4"><h2>Разместить рекламу</h2>	<p>Ознакомьтесь с <a href="#">условиями и тарифами по размещению рекламы</a> на нашем сайте.</p>
-</div>
+																<div class="col-md-4 col-sm-4"><h2>Местоположение</h2>
+<!-- Blank250 Starts Here -->
+            <div class="blank">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A92688d51a228164bcab825cd08db6ba04bf98ed47a6f84c9a35555cd9913037d&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+<!-- Blank250 Ends Here --></div>
 									</div><!-- /.row part_links-->
 					</div><!-- /.container -->
 	</section>
@@ -304,27 +309,11 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 															<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s"><h3 class="add_ad" role="button">Разделы сайта</h3><ul>
 <li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li><a href="/sitemap" >Карта сайта</a></li><li><a href="/administrirovanie" >Администрирование</a></li></ul>
 </div></div>
-																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Местоположение</h3><div class="rec_content"><script type="text/javascript">
-var cords = {"address":["\u0433.\u041c\u0438\u043d\u0441\u043a, \u0443\u043b.\u0424.\u0421\u043a\u043e\u0440\u0438\u043d\u044b 8"],"lat":["53.9245059"],"lng":["27.66503869999997"],"icon":["http:\/\/maps.google.com\/mapfiles\/ms\/micons\/blue-dot.png"]};
-var zoom =  16;
-var mapType =  google.maps.MapTypeId.ROADMAP;
-</script>
-<script type="text/javascript" src="/modules/mod_google_map/js/joomly_map.js"></script>
-<style>
-
-</style>
-<div class="joomly-map-div" style="max-width: 400px;height: 300px;margin-left: auto;margin-right: auto;">
-	<div id="map-canvas"></div>
-	<div class="map-url"><a href="http://joomly.ru/">Joomly</a></div>
-</div>	
-
+																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Разместить рекламу</h3><div class="rec_content">	<p>Ознакомьтесь с <a href="#">условиями и тарифами по размещению рекламы</a> на нашем сайте.</p>
 </div></div></div>
 																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_right_block wow fadeInDown" data-wow-delay="0.6s"><h3 class="contacts" role="button">Техподдержка 24ч/7д</h3>
 <!-- Blank250 Starts Here -->
-<div id="blankBM88" >
-    <div id="holderBM88">
-        <div id="innerBM88">
-            <div>
+            <div class="blank">
                 <div class="contacts_content">
 												<div class="mobile">
 													<i class="fa fa-mobile" aria-hidden="true"></i>
@@ -350,9 +339,6 @@ var mapType =  google.maps.MapTypeId.ROADMAP;
             <div>
                 
             </div>
-        </div>
-    </div>
-</div>
 <!-- Blank250 Ends Here --></div></div>
 													</div><!-- /.row -->
 					</div><!-- /.container -->

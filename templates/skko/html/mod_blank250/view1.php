@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
 // contentselection/order
 
 $codeeditor = '
-            <div class="map">
+            <div class="blank">
                 ' . $codeeditor . '
             </div>';
 $article = '

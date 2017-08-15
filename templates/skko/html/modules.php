@@ -183,7 +183,8 @@ function modChrome_message($module, &$params, &$attribs)
 	if($module->content){
 		echo '<div class="notice">';
 		echo'<span>Внимание!!!</span>';
-		echo strip_tags($module->content);
+		//echo strip_tags($module->content);
+		echo $module->content;
 		echo '</div>';
 	}
 }
