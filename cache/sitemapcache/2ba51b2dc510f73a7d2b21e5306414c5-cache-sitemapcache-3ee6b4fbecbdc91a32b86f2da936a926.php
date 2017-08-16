@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:24344:"<!DOCTYPE html>
+<?php die("Access Denied"); ?>#x#s:26408:"<!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
@@ -11,13 +11,12 @@
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<base href="http://skko.loc:81/karta-sajta" />
+	<base href="http://skko.loc:81/sitemap" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="title" content="СККО - Система контроля кассового оборудования - Карта сайта" />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
 	<title>СККО - Система контроля кассового оборудования - Карта сайта</title>
-	<link href="http://skko.loc:81/component/search/?Itemid=122&amp;format=opensearch" rel="search" title="Искать СККО - Система контроля кассового оборудования" type="application/opensearchdescription+xml" />
-	<link href="http://skko.loc:81/components/com_xmap/assets/css/xmap.css" rel="stylesheet" type="text/css" />
+	<link href="http://skko.loc:81/component/search/?Itemid=130&amp;format=opensearch" rel="search" title="Искать СККО - Система контроля кассового оборудования" type="application/opensearchdescription+xml" />
 	<link href="http://skko.loc:81/templates/skko/favicon.png" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/libs/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
@@ -37,11 +36,11 @@ background:#}
 #blankBM110{overflow:hidden;width:100%;
 background:#}
 	</style>
-	<script src="/media/jui/js/jquery.min.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-noconflict.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
-	<script src="/media/jui/js/bootstrap.min.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
-	<script src="/media/system/js/html5fallback.js?2f287d0182664f585f3d16d9efb07b0f" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
+	<script src="/media/system/js/html5fallback.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
 	<script type="text/javascript">
 jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
@@ -55,16 +54,16 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 				<div class="row">
 					<div class="top_main_menu">
 													<div class="form_search">
-										<form class="form-inline" action="/karta-sajta" method="post" >
+										<form class="form-inline" action="/sitemap" method="post" >
 			<div class="form-group">
 					<div class="input-group">
-						<input type="text" class="form-control" id="InputFind" placeholder="Поиск...">
+						<input name="searchword" type="search" class="form-control" id="InputFind" placeholder="Поиск...">
 						<button class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();">Найти</button>
 					</div><!-- end /.input-group -->
 			</div><!-- end /.form-group -->
 			<input type="hidden" name="task" value="search" />
 			<input type="hidden" name="option" value="com_search" />
-			<input type="hidden" name="Itemid" value="122" />
+			<input type="hidden" name="Itemid" value="130" />
 		</form>
 							</div>
 																				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -87,18 +86,18 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 													<div class="top_search">
 	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 	<div class="form_find">
-		<form action="/karta-sajta" method="post" class="form-inline">
+		<form action="/sitemap" method="post" class="form-inline">
 			<div class="form-group">
 				<label class="sr-only" for="mod-search-searchword87">Поиск</label>
 				<div class="input-group">
-					<input type="text" class="form-control" id="mod-search-searchword87" placeholder="Поиск..." size="150" width="250px">
+					<input name="searchword" type="search" class="form-control" id="mod-search-searchword87" placeholder="Поиск..." size="150" width="250px">
 					<button class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();">Найти</button>
 				</div><!-- end /.input-group -->
 			</div><!-- end /.form-group -->
 	
 			<input type="hidden" name="task" value="search" />
 			<input type="hidden" name="option" value="com_search" />
-			<input type="hidden" name="Itemid" value="122" />
+			<input type="hidden" name="Itemid" value="130" />
 		</form>
 	</div><!-- end /.form_find -->
 </div>
@@ -163,7 +162,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 <ul class="dropdown-menu"><li><a href="/about-system/opisanie-skko" >Описание СККО</a></li><li><a href="/about-system/kontakty" >Контакты</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Владельцам<i class="fa fa-caret-down" aria-hidden="true"></i></span>
 <ul class="dropdown-menu"><li><a href="/vladeltsam/poryadok-zaklyucheniya-dogovora" >Порядок заключения договора</a></li><li><a href="/vladeltsam/dokumenty" >Документы</a></li><li><a href="/vladeltsam/grafik-podklyucheniya-kassovogo-oborudovaniya-k-skko" >График подключения к СККО</a></li><li><a href="/vladeltsam/tarify-i-sposoby-oplaty" >Тарифы и способы оплаты</a></li><li><a href="/vladeltsam/voprosy-otvety" >Вопросы/Ответы</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Публикации<i class="fa fa-caret-down" aria-hidden="true"></i></span>
 <ul class="dropdown-menu"><li><a href="/publikatsii/novosti" >Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty" >Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns" >Разъяснения МНС</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ЦТО<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-<ul class="dropdown-menu"><li><a href="/tsto/perechen-tsto" >Перечень ЦТО</a></li></ul></li><li class=" active"><a href="/karta-sajta" class="site_map">Карта сайта</a></li></ul></nav>
+<ul class="dropdown-menu"><li><a href="/tsto/perechen-tsto" >Перечень ЦТО</a></li></ul></li><li><a href="/karta-sajta" class="site_map">Карта сайта</a></li></ul></nav>
 
 										<div class="row visible-xs">
 					<!-- Блок Внимание!!! -->
@@ -178,16 +177,44 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 					<!-- Блок Банеров!!! -->
 						<div  class="owl-carousel owl-theme"><!-- Вырезал id="top_banners" -->
 															<div class="item">
-															<img src="http://skko.loc:81/images/banners/autocombi.gif" alt="Alt"/>
+														<a href="http://www.ecr.by/catalog/kassovoe-oborudovanie/kassovye-apparaty/?utm_source=skko.by&utm_medium=banner&utm_campaign=banner-skko.by" target="_blank" title="Автокомби">
+								<img src="http://skko.loc:81/images/banners/autocombi2.gif" alt="Автокомби"/>
+							</a>
 													</div>
 																				<div class="item">
-															<img src="http://skko.loc:81/images/banners/avangard.gif" alt="Alt"/>
+														<a href="https://belkassa.by/products" target="_blank" title="Белкасса">
+								<img src="http://skko.loc:81/images/banners/belkassa.gif" alt="Белкасса"/>
+							</a>
 													</div>
 																				<div class="item">
-															<img src="http://skko.loc:81/images/banners/belkassa.gif" alt="Alt"/>
+														<a href="http://www.else.by" target="_blank" title="Электрон Сервис">
+								<img src="http://skko.loc:81/images/banners/electron_service.gif" alt="Электрон Сервис"/>
+							</a>
 													</div>
 																				<div class="item">
-															<img src="http://skko.loc:81/images/banners/tusson.gif" alt="Alt"/>
+														<a href="http://nts-shop.by/catalog/kassovye_apparaty/" target="_blank" title="НТС">
+								<img src="http://skko.loc:81/images/banners/htc.gif" alt="НТС"/>
+							</a>
+													</div>
+																				<div class="item">
+														<a href="http://tkk.by/" target="_blank" title="ТехКонсалтинг">
+								<img src="http://skko.loc:81/images/tehconsalting.gif" alt="ТехКонсалтинг"/>
+							</a>
+													</div>
+																				<div class="item">
+														<a href="http://cscenter.by" target="_blank" title="КомпьютерЦентрСервис">
+								<img src="http://skko.loc:81/images/banners/computer_center_service.jpg" alt="КомпьютерЦентрСервис"/>
+							</a>
+													</div>
+																				<div class="item">
+														<a href="http://kassa2000.by/kassy-i-terminaly/" target="_blank" title="Транзитплюс">
+								<img src="http://skko.loc:81/images/banners/transitplus.gif" alt="Транзитплюс"/>
+							</a>
+													</div>
+																				<div class="item">
+														<a href="/about-system/kontakty/9-razmeshchenie-reklamy" target="_blank" title="Ваша реклама">
+								<img src="http://skko.loc:81/images/banners/your_reclama.gif" alt="Ваша реклама"/>
+							</a>
 													</div>
 											
 		
@@ -279,11 +306,13 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 						</div>
 									</div><!-- /.row main_content -->
 										<div class="row part_links">
-											<div class="col-md-4 col-sm-4"><h2>Сервисы оплаты услуг</h2>	<p><a href="/vladeltsam/tarify-i-sposoby-oplaty/8-bussines/16-payment"><img src="/images/banners/pay.jpg" alt="" /></a></p>
+											<div class="col-md-4 col-sm-4"><h2>Разделы сайта</h2><ul>
+<li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li class=" active"><a href="/sitemap" >Карта сайта</a></li></ul>
 </div>
 																<div class="col-md-4 col-sm-4"><h2>Рекомендуем</h2>	<ul>
 <li><a href="http://ckta.by/" target="_blank" rel="noopener noreferrer">Система контроля торговых автоматов</a></li>
-<li><a href="http://pki.by/" target="_blank" rel="noopener noreferrer">Удостоверяющий центр</a></li>
+<li><a href="http://pki.by/" target="_blank" rel="noopener noreferrer">Удостоверяющий центр РУП «Информационно-издательский центр по налогам и сборам»</a></li>
+<li><a href="https://nces.by" target="_blank" rel="noopener noreferrer">РУП «Национальный центр электронных услуг»</a></li>
 </ul>
 </div>
 																<div class="col-md-4 col-sm-4"><h2>Местоположение</h2>
@@ -306,10 +335,11 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 							<div class="footer_topline">
 					<div class="container">
 						<div class="row">
-															<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s"><h3 class="add_ad" role="button">Разделы сайта</h3><ul>
-<li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li><a href="/sitemap" >Карта сайта</a></li><li><a href="/administrirovanie" >Администрирование</a></li></ul>
+															<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s"><h3 class="add_ad" role="button">Сервисы оплаты услуг</h3>	<p><a href="/vladeltsam/tarify-i-sposoby-oplaty/8-bussines/16-payment"><img alt="" src="/images/banners/pay.jpg" /></a></p>
 </div></div>
-																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Разместить рекламу</h3><div class="rec_content">	<p>Ознакомьтесь с <a href="#">условиями и тарифами по размещению рекламы</a> на нашем сайте.</p>
+																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Разместить рекламу</h3><div class="rec_content">	<p>Ознакомьтесь с <a href="/about-system/kontakty/9-razmeshchenie-reklamy">условиями и тарифами по размещению рекламы</a> на нашем сайте.</p>
+<p>Контактный телефон по вопросам размещения рекламы на сайте:</p>
+<p><span style="font-size: 14pt;">8 (017) 269-19-08</span></p>
 </div></div></div>
 																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_right_block wow fadeInDown" data-wow-delay="0.6s"><h3 class="contacts" role="button">Техподдержка 24ч/7д</h3>
 <!-- Blank250 Starts Here -->
@@ -379,7 +409,6 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 	<script type="text/javascript" src="http://skko.loc:81/templates/skko/libs/landing-nav/navigation.js"></script>
 	<script type="text/javascript" src="http://skko.loc:81/templates/skko/js/wow.min.js"></script>
 	<script type="text/javascript" src="http://skko.loc:81/templates/skko/js/common.js"></script>
-
 	
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->

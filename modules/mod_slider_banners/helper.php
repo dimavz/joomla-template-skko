@@ -24,6 +24,7 @@ class listImagesHelper{
 			if($params->get('image'.$count)!='' && $params->get('link_image'.$count)!='' ){
 				$img_item['src'] = Juri::base().$params->get('image'.$count);
 				$img_item['link'] = $params->get('link_image'.$count);
+				$img_item['alt'] = $params->get('title_baner'.$count);
 				array_push($images,$img_item);
 			}
 			else if($params->get('image'.$count)!='' && $params->get('link_image'.$count)==''){

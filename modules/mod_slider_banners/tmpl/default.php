@@ -14,16 +14,16 @@ defined('_JEXEC') or die;
 					<?php if(is_array($img) ): ?>
 						<div class="item">
 							<?php if($img['link']!=''): ?>
-							<a href="<?php echo $img['link']; ?>" target="_blank">
-								<img src="<?php echo $img['src'] ?>" alt="Alt"/>
+							<a href="<?php echo $img['link']; ?>" target="_blank" title="<?php echo $img['alt']; ?>">
+								<img src="<?php echo $img['src'] ?>" alt="<?php echo $img['alt']; ?>"/>
 							</a>
 							<?php else: ?>
-								<img src="<?php echo $img['src'] ?>" alt="Alt"/>
+								<img src="<?php echo $img['src'] ?>" alt="<?php echo $img['alt']; ?>"/>
 							<?php endif; ?>
 						</div>
 					<?php else: ?>
 						<div class="item">
-							<img src="<?php echo $img ?>" alt="Alt"/>	
+							<img src="<?php echo $img ?>" alt="<?php echo $img['alt']; ?>"/>
 						</div>
 					<?php endif; ?>
 				<?php endforeach; ?>		

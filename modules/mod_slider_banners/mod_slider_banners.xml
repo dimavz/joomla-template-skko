@@ -27,34 +27,53 @@
 	<config>
 		<fields name="params">
 			<fieldset name="images" label="MOD_SLIDER_BANNERS_FIELDSET_IMAGES">
-			
+				
+				<field name="title_baner1" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER1" />
 				<field name="image1" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE1" />
 				<field name="link_image1" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE1" />
+				<field type="spacer" name="field_spacer1" hr="true"/>
 				
+				<field name="title_baner2" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER2" />
 				<field name="image2" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE2" />
 				<field name="link_image2" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE2" />
+				<field type="spacer" name="field_spacer2" hr="true" />
 				
+				<field name="title_baner3" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER3" />
 				<field name="image3" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE3" />
 				<field name="link_image3" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE3" />
+				<field type="spacer" name="field_spacer3" hr="true" />
 				
+				<field name="title_baner4" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER4" />
 				<field name="image4" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE4" />
 				<field name="link_image4" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE4" />
+				<field type="spacer" name="field_spacer4" hr="true" />
 				
+				<field name="title_baner5" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER5" />
 				<field name="image5" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE5" />
 				<field name="link_image5" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE5" />
+				<field type="spacer" name="field_spacer5" hr="true" />
 				
+				<field name="title_baner6" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER6" />
 				<field name="image6" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE6" />
 				<field name="link_image6" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE6" />
+				<field type="spacer" name="field_spacer6" hr="true" />
 				
+				<field name="title_baner7" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER7" />
 				<field name="image7" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE7" />
 				<field name="link_image7" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE7" />
+				<field type="spacer" name="field_spacer7" hr="true" />
 				
+				<field name="title_baner8" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER8" />
 				<field name="image8" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE8" />
 				<field name="link_image8" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE8" />
+				<field type="spacer" name="field_spacer8" hr="true" />
 				
+				<field name="title_baner9" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER9" />
 				<field name="image9" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE9" />
 				<field name="link_image9" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE9" />
+				<field type="spacer" name="field_spacer9" hr="true" />
 				
+				<field name="title_baner10" type="text" label="MOD_SLIDER_BANNERS_FIELD_TITLE_BANER10" />
 				<field name="image10" type="media" label="MOD_SLIDER_BANNERS_FIELD_IMAGE10" />
 				<field name="link_image10" type="text" label="MOD_SLIDER_BANNERS_FIELD_LINK_IMAGE10" />
 				
