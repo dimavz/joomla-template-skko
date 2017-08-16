@@ -35,7 +35,7 @@ body {
 	font-size: 20px;
 	position: absolute;
 	top: 0px;
-	left: 186px;
+	right: 0px;
 	width: 80px;
 	z-index: 90;
 }
@@ -49,6 +49,10 @@ body {
 	background-color: #505559;
 	width: 100%;
 	z-index: 20;
+}
+
+.top_main_menu .form_search .form-inline .input-group{
+	width: 100%;
 }
 
 .top_main_menu ul li{
