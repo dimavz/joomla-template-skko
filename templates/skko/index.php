@@ -15,17 +15,6 @@ $menu = JFactory::getApplication()->getMenu();
 $activePage = $menu->getActive()->id;
 $defaultPage = $menu->getDefault()->id;
 
-$user = JFactory::getUser();
-
-if ($user->guest)
-{
-	$showGuest=true;
-}
-else
-{
-	$showGuest=false;
-}
-
 //Подключение стилей (stylesheets)
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/favicon.png');
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/bootstrap.min.css');

@@ -84,7 +84,7 @@ body {
 }
 
 #accordion .panel-info > .panel-heading {
-	background-color: #4EC698;
+	background-color:#396B62;
 	border-color: #fff;
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 #accordion .panel-info .panel-body{
-	background-color: #31B0D5;
+	background-color: #4EC698;
 }
 #accordion .panel-info .panel-body ul{
 	display: block;

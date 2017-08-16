@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:24538:"<!DOCTYPE html>
+<?php die("Access Denied"); ?>#x#s:24344:"<!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
@@ -147,7 +147,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 																	</div><!-- /.row -->
 																	<div class="row hidden-xs">
 										<!-- Блок Внимание!!! -->
-										<div class="notice"><span>Внимание!!!</span>	Договор оказания услуг СККО и другие документы могут быть направлены почтой либо предоставлены нарочным по месту расположения отделов технической поддержки СККО Подробнее
+										<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и другие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
 </div>
 									</div>
 															</div>
@@ -167,7 +167,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 
 										<div class="row visible-xs">
 					<!-- Блок Внимание!!! -->
-					<div class="notice"><span>Внимание!!!</span>	Договор оказания услуг СККО и другие документы могут быть направлены почтой либо предоставлены нарочным по месту расположения отделов технической поддержки СККО Подробнее
+					<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и другие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
 </div>
 				</div>
 					</div>
