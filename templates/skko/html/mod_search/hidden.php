@@ -16,7 +16,7 @@ JHtml::_('script', 'system/html5fallback.js', array('version' => 'auto', 'relati
 		<form class="form-inline" action="<?php echo JRoute::_('index.php'); ?>" method="post" >
 			<div class="form-group">
 					<div class="input-group">
-						<input type="text" class="form-control" id="InputFind" placeholder="<?php echo $text ?>">
+						<input name="searchword" type="search" class="form-control" id="InputFind" placeholder="<?php echo $text ?>">
 						<button class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();">Найти</button>
 					</div><!-- end /.input-group -->
 			</div><!-- end /.form-group -->
