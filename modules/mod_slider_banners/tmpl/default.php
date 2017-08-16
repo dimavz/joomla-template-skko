@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 					<?php if(is_array($img) ): ?>
 						<div class="item">
 							<?php if($img['link']!=''): ?>
-							<a href="<?php echo $img['link']; ?>">
+							<a href="<?php echo $img['link']; ?>" target="_blank">
 								<img src="<?php echo $img['src'] ?>" alt="Alt"/>
 							</a>
 							<?php else: ?>
