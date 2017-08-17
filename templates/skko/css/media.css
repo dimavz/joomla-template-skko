@@ -962,6 +962,7 @@
 				right: -20px;
 				background-color: #396B62;
 				padding: 20px;
+				z-index: 100;
 			}
 
 			.top_header .container .row .col-md-3.col-sm-3.col-xs-4 {
