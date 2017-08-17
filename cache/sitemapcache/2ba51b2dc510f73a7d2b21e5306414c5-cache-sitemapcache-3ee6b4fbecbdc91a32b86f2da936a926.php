@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:26408:"<!DOCTYPE html>
+<?php die("Access Denied"); ?>#x#s:26303:"<!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
@@ -11,12 +11,13 @@
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<base href="http://skko.loc:81/sitemap" />
+	<base href="http://skko.loc:81/karta-sajta" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="title" content="СККО - Система контроля кассового оборудования - Карта сайта" />
 	<meta name="generator" content="Joomla! - Open Source Content Management" />
 	<title>СККО - Система контроля кассового оборудования - Карта сайта</title>
-	<link href="http://skko.loc:81/component/search/?Itemid=130&amp;format=opensearch" rel="search" title="Искать СККО - Система контроля кассового оборудования" type="application/opensearchdescription+xml" />
+	<link href="http://skko.loc:81/component/search/?Itemid=122&amp;format=opensearch" rel="search" title="Искать СККО - Система контроля кассового оборудования" type="application/opensearchdescription+xml" />
+	<link href="http://skko.loc:81/components/com_xmap/assets/css/xmap.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/favicon.png" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="http://skko.loc:81/templates/skko/libs/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
@@ -54,7 +55,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 				<div class="row">
 					<div class="top_main_menu">
 													<div class="form_search">
-										<form class="form-inline" action="/sitemap" method="post" >
+										<form class="form-inline" action="/karta-sajta" method="post" >
 			<div class="form-group">
 					<div class="input-group">
 						<input name="searchword" type="search" class="form-control" id="InputFind" placeholder="Поиск...">
@@ -63,11 +64,11 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 			</div><!-- end /.form-group -->
 			<input type="hidden" name="task" value="search" />
 			<input type="hidden" name="option" value="com_search" />
-			<input type="hidden" name="Itemid" value="130" />
+			<input type="hidden" name="Itemid" value="122" />
 		</form>
 							</div>
 																				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-	<div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a href="/home">Главная</a></h4></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false">О системе<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/about-system/opisanie-skko">Описание СККО</a></li><li><a href="/about-system/kontakty">Контакты</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false">Владельцам<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/vladeltsam/poryadok-zaklyucheniya-dogovora">Порядок заключения договора</a></li><li><a href="/vladeltsam/dokumenty">Документы</a></li><li><a href="/vladeltsam/grafik-podklyucheniya-kassovogo-oborudovaniya-k-skko">График подключения к СККО</a></li><li><a href="/vladeltsam/tarify-i-sposoby-oplaty">Тарифы и способы оплаты</a></li><li><a href="/vladeltsam/voprosy-otvety">Вопросы/Ответы</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false">Публикации<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/publikatsii/novosti">Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty">Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns">Разъяснения МНС</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false">ЦТО<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/tsto/perechen-tsto">Перечень ЦТО</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a href="/karta-sajta">Карта сайта</a></h4></div></div></div>
+	<div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a href="/home">Главная</a></h4></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false">О системе<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/about-system/opisanie-skko">Описание СККО</a></li><li><a href="/about-system/kontakty">Контакты</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false">Владельцам<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/vladeltsam/poryadok-zaklyucheniya-dogovora">Порядок заключения договора</a></li><li><a href="/vladeltsam/dokumenty">Документы</a></li><li><a href="/vladeltsam/grafik-podklyucheniya-kassovogo-oborudovaniya-k-skko">График подключения к СККО</a></li><li><a href="/vladeltsam/tarify-i-sposoby-oplaty">Тарифы и способы оплаты</a></li><li><a href="/vladeltsam/voprosy-otvety">Вопросы/Ответы</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false">Публикации<i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/publikatsii/novosti">Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty">Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns">Разъяснения МНС</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a href="/tsto">ЦТО</a></h4></div></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body"><ul><li><a href="/tsto/perechen-tsto">Перечень ЦТО</a></li></ul></div></div></div><div class="panel panel-info"><div class="panel-heading" ><h4 class="panel-title"><a href="/karta-sajta">Карта сайта</a></h4></div></div></div>
 
 											</div><!-- /.top_main_menu -->
 					<div class="col-md-6 col-sm-6 col-xs-3">
@@ -86,7 +87,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 													<div class="top_search">
 	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 	<div class="form_find">
-		<form action="/sitemap" method="post" class="form-inline">
+		<form action="/karta-sajta" method="post" class="form-inline">
 			<div class="form-group">
 				<label class="sr-only" for="mod-search-searchword87">Поиск</label>
 				<div class="input-group">
@@ -97,7 +98,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 	
 			<input type="hidden" name="task" value="search" />
 			<input type="hidden" name="option" value="com_search" />
-			<input type="hidden" name="Itemid" value="130" />
+			<input type="hidden" name="Itemid" value="122" />
 		</form>
 	</div><!-- end /.form_find -->
 </div>
@@ -146,7 +147,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 																	</div><!-- /.row -->
 																	<div class="row hidden-xs">
 										<!-- Блок Внимание!!! -->
-										<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и другие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
+										<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и сопутствующие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
 </div>
 									</div>
 															</div>
@@ -161,12 +162,11 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 <li class=" home"><a href="/" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">О системе<i class="fa fa-caret-down" aria-hidden="true"></i></span>
 <ul class="dropdown-menu"><li><a href="/about-system/opisanie-skko" >Описание СККО</a></li><li><a href="/about-system/kontakty" >Контакты</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Владельцам<i class="fa fa-caret-down" aria-hidden="true"></i></span>
 <ul class="dropdown-menu"><li><a href="/vladeltsam/poryadok-zaklyucheniya-dogovora" >Порядок заключения договора</a></li><li><a href="/vladeltsam/dokumenty" >Документы</a></li><li><a href="/vladeltsam/grafik-podklyucheniya-kassovogo-oborudovaniya-k-skko" >График подключения к СККО</a></li><li><a href="/vladeltsam/tarify-i-sposoby-oplaty" >Тарифы и способы оплаты</a></li><li><a href="/vladeltsam/voprosy-otvety" >Вопросы/Ответы</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Публикации<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-<ul class="dropdown-menu"><li><a href="/publikatsii/novosti" >Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty" >Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns" >Разъяснения МНС</a></li></ul></li><li class=" dropdown"><span class="header" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ЦТО<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-<ul class="dropdown-menu"><li><a href="/tsto/perechen-tsto" >Перечень ЦТО</a></li></ul></li><li><a href="/karta-sajta" class="site_map">Карта сайта</a></li></ul></nav>
+<ul class="dropdown-menu"><li><a href="/publikatsii/novosti" >Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty" >Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns" >Разъяснения МНС</a></li></ul></li><li class=" dropdown"><a href="/tsto" class="cto">ЦТО</a><ul class="dropdown-menu"><li><a href="/tsto/perechen-tsto" >Перечень ЦТО</a></li></ul></li><li class=" active"><a href="/karta-sajta" class="site_map">Карта сайта</a></li></ul></nav>
 
 										<div class="row visible-xs">
 					<!-- Блок Внимание!!! -->
-					<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и другие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
+					<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и сопутствующие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
 </div>
 				</div>
 					</div>
@@ -272,7 +272,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 </li><li><span>Публикации</span>
 <ul class="level_1">
 <li><a href="/publikatsii/novosti" title="Новости">Новости</a></li><li><a href="/publikatsii/normativnye-pravovye-akty" title="Нормативные правовые акты">Нормативные правовые акты</a></li><li><a href="/publikatsii/raz-yasneniya-mns" title="Разъяснения МНС">Разъяснения МНС</a></li></ul>
-</li><li><span>ЦТО</span>
+</li><li><a href="/tsto" title="ЦТО">ЦТО</a>
 <ul class="level_1">
 <li><a href="/tsto/perechen-tsto" title="Перечень ЦТО">Перечень ЦТО</a></li></ul>
 </li><li><a href="/karta-sajta" title="Карта сайта">Карта сайта</a></li></ul>
@@ -307,7 +307,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 									</div><!-- /.row main_content -->
 										<div class="row part_links">
 											<div class="col-md-4 col-sm-4"><h2>Разделы сайта</h2><ul>
-<li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li class=" active"><a href="/sitemap" >Карта сайта</a></li></ul>
+<li><a href="/o-systeme" >О системе</a></li><li><a href="/vladelcam" >Владельцам</a></li><li><a href="/publics" >Публикации</a></li><li><a href="/centers" >ЦТО</a></li><li><a href="/kontakti" >Контакты</a></li><li><a href="/sitemap" >Карта сайта</a></li></ul>
 </div>
 																<div class="col-md-4 col-sm-4"><h2>Рекомендуем</h2>	<ul>
 <li><a href="http://ckta.by/" target="_blank" rel="noopener noreferrer">Система контроля торговых автоматов</a></li>
@@ -337,7 +337,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 						<div class="row">
 															<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_left_block wow fadeInDown" data-wow-delay="0.2s"><h3 class="add_ad" role="button">Сервисы оплаты услуг</h3>	<p><a href="/vladeltsam/tarify-i-sposoby-oplaty/8-bussines/16-payment"><img alt="" src="/images/banners/pay.jpg" /></a></p>
 </div></div>
-																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Разместить рекламу</h3><div class="rec_content">	<p>Ознакомьтесь с <a href="/about-system/kontakty/9-razmeshchenie-reklamy">условиями и тарифами по размещению рекламы</a> на нашем сайте.</p>
+																						<div class="col-md-4 col-sm-4 col-xs-12"><div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s"><h3 class="reclama" role="button">Разместить рекламу</h3><div class="rec_content">	<!-- <p>Ознакомьтесь с <a href="/about-system/kontakty/9-razmeshchenie-reklamy">условиями и тарифами по размещению рекламы</a> на нашем сайте.</p> -->
 <p>Контактный телефон по вопросам размещения рекламы на сайте:</p>
 <p><span style="font-size: 14pt;">8 (017) 269-19-08</span></p>
 </div></div></div>
@@ -376,7 +376,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 										<div class="footer_bottomline">
 					<div class="container">
 						<div class="row">
-								<p>РУП "Информационно-издательский центр по налогам и сборам". 2016 год.</p>
+								<p>РУП "Информационно-издательский центр по налогам и сборам". 2015 - 2017 год.</p>
 
 						</div>
 					</div>
