@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:26303:"<!DOCTYPE html>
+<?php die("Access Denied"); ?>#x#s:26353:"<!DOCTYPE html>
 <!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
@@ -37,11 +37,11 @@ background:#}
 #blankBM110{overflow:hidden;width:100%;
 background:#}
 	</style>
-	<script src="/media/jui/js/jquery.min.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-noconflict.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
-	<script src="/media/jui/js/bootstrap.min.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
-	<script src="/media/system/js/html5fallback.js?2405152e8a6a672dd70cf4de37e6a455" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?c25271588986b7404c6d62e2c0c20d83" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?c25271588986b7404c6d62e2c0c20d83" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?c25271588986b7404c6d62e2c0c20d83" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?c25271588986b7404c6d62e2c0c20d83" type="text/javascript"></script>
+	<script src="/media/system/js/html5fallback.js?c25271588986b7404c6d62e2c0c20d83" type="text/javascript"></script>
 	<script type="text/javascript">
 jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
@@ -147,7 +147,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 																	</div><!-- /.row -->
 																	<div class="row hidden-xs">
 										<!-- Блок Внимание!!! -->
-										<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и сопутствующие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
+										<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и сопутствующие документы почтой либо нарочным? <a href="/publikatsii/novosti/26-kak-otpravit-dogovor-skko-i-soputstvuyushchie-dokumenty">Подробнее...</a></p>
 </div>
 									</div>
 															</div>
@@ -166,7 +166,7 @@ jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"})
 
 										<div class="row visible-xs">
 					<!-- Блок Внимание!!! -->
-					<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и сопутствующие документы почтой либо нарочным? <a href="/publikatsii/novosti/23-vnimaniyu-polzovatelej-sistemy">Подробнее...</a></p>
+					<div class="notice"><span>Внимание!!!</span>	<p>Как отправить договор СККО и сопутствующие документы почтой либо нарочным? <a href="/publikatsii/novosti/26-kak-otpravit-dogovor-skko-i-soputstvuyushchie-dokumenty">Подробнее...</a></p>
 </div>
 				</div>
 					</div>
