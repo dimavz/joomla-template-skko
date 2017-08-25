@@ -33,7 +33,6 @@ $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/animate.min.c
 JHtml::_('jquery.framework');
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
-//unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
 
 //Подключение скриптов (scripts)
 //$doc->addScript(JUri::base().'templates/'.$doc->template.'/libs/jquery/jquery-1.11.1.min.js');
