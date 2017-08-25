@@ -30,7 +30,7 @@ $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/media.css');
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/animate.min.css');
 
 // Отключение стандартных скриптов Joomla (Конфликтуют с подключаемыми скриптами шаблона)
-//JHtml::_('jquery.framework');
+JHtml::_('jquery.framework');
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/jquery.min.js']);
 unset($doc->_scripts[JURI::root(true). '/media/jui/js/bootstrap.min.js']);
 //unset($doc->_scripts[JURI::root(true). '/media/system/js/mootools-more.js']);
