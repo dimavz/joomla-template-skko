@@ -98,7 +98,9 @@ function modChrome_footer_left_block($module, &$params, &$attribs)
 		echo '<h3 class="add_ad" role="button">';
 		echo $module->title;
 		echo '</h3>';
+		echo '<div class="pay">';
 		echo $module->content;
+		echo '</div>';
 		echo '</div>';
 		echo '</div>';
 	}
@@ -107,8 +109,8 @@ function modChrome_footer_center_block($module, &$params, &$attribs)
 {
 	if($module->content){
 		echo '<div class="col-md-4 col-sm-4 col-xs-12">';
-		echo '<div class="footer_center_block wow fadeInDown"data-wow-delay="0.4s">';
-		echo '<h3 class="reclama" role="button">';
+		echo '<div class="footer_center_block wow fadeInDown" data-wow-delay="0.4s">';
+		echo '<h3 class="recinfo" role="button">';
 		echo $module->title;
 		echo '</h3>';
 		echo'<div class="rec_content">';

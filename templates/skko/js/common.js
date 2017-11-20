@@ -21,10 +21,10 @@ $(document).ready(function() {
 	});
 
 	$(".add_ad").click(function(){
-		$(".footer_left_block ul").slideToggle();
+		$(".footer_left_block .pay").slideToggle();
 	});
 
-	$(".reclama").click(function(){
+	$(".recinfo").click(function(){
 		$(".rec_content").slideToggle();
 	});
 

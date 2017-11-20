@@ -206,7 +206,7 @@ if ($doc->countModules('position-18'))
 							<div class="logo_title visible-xs-block">
 								<a href="/"><h1><?php echo $site_name ?  $site_name : 'SKKO.BY'?></h1></a>
 							</div>
-							<div class="greeting wow flipInX">
+							<div class="greeting  wow flipInX">
 								<div class="row">
 									<div class="col-md-9 col-sm-9">
 										<h3><?php echo $site_desc ?  $site_desc : 'СККО - Система контроля кассового оборудования.' ?></h3> 
