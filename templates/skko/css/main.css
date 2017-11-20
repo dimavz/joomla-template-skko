@@ -526,6 +526,22 @@ ul.profil_menu li i{
 		background-color: #396b62;
 		color: yellow;
 	}
+	.main_menu ul li a.link {
+		color: #fff;
+		padding: 10px 15px;
+		-webkit-transition:all .25s;
+		-o-transition:all .25s ;
+		transition:all .25s ;
+		cursor: pointer;
+	}
+	.main_menu ul li a.link:hover{
+		color: yellow;
+		background-color: #396B62;
+	}
+	.main_menu ul li.active a.link {
+		background-color: #396b62;
+		color: yellow;
+	}
 	/*.main_menu ul li.active a {
 		background-color: #396b62;
 		color: yellow;
