@@ -272,6 +272,9 @@
 	.footer_left_block ul{
 		display: none;
 	}
+	.footer_left_block .pay{
+		display: none;
+	}
 	
 	.footer_center_block {
 		text-align: left;
@@ -1336,6 +1339,9 @@
 					display: block !important;
 					left: 370px !important;
 					top:0 !important;
+				}
+				.footer_left_block .pay{
+					display: block !important;
 				}
 				
 			}
