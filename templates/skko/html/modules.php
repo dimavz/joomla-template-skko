@@ -183,11 +183,11 @@ function modChrome_button_mail($module, &$params, &$attribs)
 function modChrome_message($module, &$params, &$attribs)
 {
 	if($module->content){
-		echo '<div class="notice">';
-		echo'<span>Внимание!!!</span>';
-		//echo strip_tags($module->content);
-		echo $module->content;
-		echo '</div>';
+		echo '<marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">';
+		echo'<span>ВНИМАНИЕ!!!</span>';
+		echo strip_tags($module->content);
+		//echo $module->content;
+		echo '</marquee>';
 	}
 }
 
