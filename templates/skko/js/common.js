@@ -3,6 +3,10 @@ $(document).ready(function() {
 		$(this).next().slideToggle();
 	}); */
 
+	$(".menu_icon").click(function(){
+		$(".top_main_menu").slideToggle();
+	});
+
 	$(".main_menu_bt").click(function(){
 		$(".main_menu ul").slideToggle();
 	});
@@ -21,10 +25,10 @@ $(document).ready(function() {
 	});
 
 	$(".add_ad").click(function(){
-		$(".footer_left_block .pay").slideToggle();
+		$(".footer_left_block ul").slideToggle();
 	});
 
-	$(".recinfo").click(function(){
+	$(".reclama").click(function(){
 		$(".rec_content").slideToggle();
 	});
 
@@ -86,8 +90,9 @@ $(document).ready(function() {
 	owl.owlCarousel({
 		loop:true,
 		margin:10,
-		// nav:true,
-		// autoHeight:true,
+        //merge:true,
+		//nav:true,
+		//autoHeight:true,
 		autoplay:true,
 		autoplayTimeout:2000,
 		autoplayHoverPause:true,
@@ -97,16 +102,19 @@ $(document).ready(function() {
 				items:1
 			},
 			480 : {
+				items:1
+			},
+			600:{
 				items:2
 			},
 			768:{
-				items:3
+				items:2
 			},
 			1024:{
-				items:4
+				items:3
 			},
 			1200:{
-				items:5
+				items:4
 			}
 		}
 	});
@@ -151,20 +159,19 @@ $(document).ready(function() {
 	
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	// $("form").submit(function() {
-	// 	$.ajax({
-	// 		type: "GET",
-	// 		url: "mail.php",
-	// 		data: $("form").serialize()
-	// 	}).done(function() {
-	// 		alert("Спасибо за заявку!");
-	// 		setTimeout(function() {
-	// 			$.fancybox.close();
-	// 		}, 1000);
-	// 	});
-	// 	return false;
-	// });
-	
+	$("form").submit(function() {
+		$.ajax({
+			type: "GET",
+			url: "mail.php",
+			data: $("form").serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.fancybox.close();
+			}, 1000);
+		});
+		return false;
+	});
  // Фитксация главного меню
  var $menu = $("main_menu");
 
