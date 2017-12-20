@@ -183,13 +183,22 @@ ul.profil_menu li i {
 
 #header_topline .container .row ul li {
   display: inline;
-  /*padding: 5px;*/
+  position: relative;
+  /*padding: 13px 5px;*/
+  padding-right: 10px;
   margin-right: 10px;
   text-transform: uppercase;
   text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6); }
 
   #header_topline .container .row ul li:hover {
     color:yellow;
+    /*background-color: orange;*/
+  }
+
+  #header_topline .container .row ul li i{
+    position: absolute;
+    top: 3px;
+    right: 2px;
   }
 
 #header_topline .container .row ul li ul.dropdown-menu {
