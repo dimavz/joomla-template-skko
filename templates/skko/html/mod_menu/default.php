@@ -24,18 +24,18 @@ if ($tagId = $params->get('tag_id', ''))
 	//print_r($item);
 	$class = '';
 	if ($item->route=='home'){
-		$class .= ' home';
+		$class .= 'home link';
+	}
+
+	if ($item->deeper)
+	{
+		$class .= 'dropdown';
 	}
 
 	// Если ID входит в путь ссылки, то делаем ссылку активной
 	if (in_array($item->id, $path))
 	{
 		$class .= ' active';
-	}
-
-	if ($item->deeper)
-	{
-		$class .= ' dropdown';
 	}
 
 	/*if ($item->parent)
@@ -46,7 +46,7 @@ if ($tagId = $params->get('tag_id', ''))
 		echo '<li class="' . $class . '">';
 	}
 	else{
-		echo '<li>';
+		echo '<li class="link">';
 	}
 
 	//echo '<li class="' . $class . '">';
