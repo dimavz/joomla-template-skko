@@ -28,7 +28,7 @@ if ($item->anchor_rel)
 }
 if ($item->route =='home')
 {
-	$linktype = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>';
+	$linktype = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>'.$item->title;
 }
 else{
 		$linktype = $item->title;
