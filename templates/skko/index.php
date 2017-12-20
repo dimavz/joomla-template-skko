@@ -179,19 +179,31 @@ if ($doc->countModules('position-18'))
 			<div class="row">
 				<div class="wraper_logo">
 					<div class="col-md-3 col-sm-3 col-xs-4">
-						<div class="logo_img wow bounceInDown" data-wow-delay="1.5s">
+						<?php if($activePage == $defaultPage) :?>
+								<div class="logo_img wow bounceInDown" data-wow-delay="1.5s">
+						<?php else:?>
+								<div class="logo_img">
+						<?php endif;?>
 							<a href="/">
-								<h1>СККО</h1>
+								<h1><?php echo $site_name ?  $site_name : 'СККО'?></h1>
 							</a>
 						</div>
-						<div class="phones wow fadeInLeft" data-wow-delay="2s">
+						<?php if($activePage == $defaultPage) :?>
+								<div class="phones wow fadeInLeft" data-wow-delay="2s">
+						<?php else:?>
+								<div class="phones">
+						<?php endif;?>
 							<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
 							8 (017) 269-18-00
 						</div>
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-8">
 						<div class="logo_text">
-							<div class="greeting wow bounceInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+							<?php if($activePage == $defaultPage) :?>
+								<div class="greeting wow bounceInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+							<?php else:?>
+								<div class="greeting">
+							<?php endif;?>
 								<div class="row">
 									<div class="col-md-9 col-sm-9">
 										<h3>Система контроля кассового оборудования.</h3>
