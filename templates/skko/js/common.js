@@ -32,6 +32,10 @@ $(document).ready(function() {
 		$(".rec_content").slideToggle();
 	});
 
+	$(".recinfo").click(function(){
+		$(".rec_content").slideToggle();
+	});
+
 	$(".contacts").click(function(){
 		$(".contacts_content").slideToggle();
 	});
