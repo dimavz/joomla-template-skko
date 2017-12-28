@@ -179,7 +179,6 @@ function modChrome_message($module, &$params, &$attribs)
 {
 	if($module->content){
 		echo '<marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">';
-		echo'<span>ВНИМАНИЕ!!!</span>';
 		echo strip_tags($module->content);
 		//echo $module->content;
 		echo '</marquee>';
