@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 
 	$(".add_ad").click(function(){
-		$(".footer_left_block ul").slideToggle();
+		$(".pay").slideToggle();
 	});
 
 	$(".reclama").click(function(){
