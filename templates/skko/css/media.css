@@ -373,6 +373,9 @@
     .rec_content {
         display: none;
     }
+    .pay{
+        display: none;
+    }
 
     .footer_right_block {
         width: 100%;
@@ -1458,6 +1461,10 @@
 
                 .rec_content {
                     display: block !important;
+                }
+
+                .pay{
+                    display: block!important;
                 }
 
                 .contacts_content {
