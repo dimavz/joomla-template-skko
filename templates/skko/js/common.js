@@ -99,7 +99,7 @@ $(document).ready(function() {
 		//autoHeight:true,
 		autoplay:true,
 		autoplayTimeout:2000,
-		autoplayHoverPause:true,
+		// autoplayHoverPause:true,
 		dots:false,
 		responsive:{
 			0:{
