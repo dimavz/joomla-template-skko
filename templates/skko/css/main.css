@@ -1663,6 +1663,15 @@ section.content {
   color: #1d1d1d;
   text-decoration: underline; }
 
+  .article_main_post a{
+  	color: #4EC698;
+  }
+
+  .article_main_post a:hover{
+  	text-decoration:underline;
+  	background-color: transparent;
+  }
+
 .article_main_post > a {
   color: #1d1d1d; }
 
