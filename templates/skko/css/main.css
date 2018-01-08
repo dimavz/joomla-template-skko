@@ -232,6 +232,9 @@ ul.profil_menu li i {
 #header_topline .container .row ul li.active {
   color: yellow; }
 
+ #header_topline .container .row ul li.active a {
+  color: yellow; }
+
 #header_topline .dropdown-menu > .active > a {
   background-color: #396B62;
   color: yellow; }
@@ -315,7 +318,7 @@ li.link a:hover {
   right: 0px;
   height: 34px;
   width: 75px;
-  background-color: #4EC698;
+  background-color: #396B62;
   color: #fff;
   z-index: 30;
   -webkit-border-top-right-radius: 0.3em;
@@ -488,7 +491,7 @@ li.link a:hover {
 
 /*====== Главное меню ======== */
 .main_menu {
-  top: 50px;
+  top: 40px;
   width: 1170px;
   height: 50px;
   z-index: 100;
@@ -1047,7 +1050,8 @@ section.content {
           box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
 
 .part_links div {
-  padding: 20px; }
+  padding: 5px; 
+}
 
 .part_links div img.map {
   width: 100%; }
@@ -1462,6 +1466,14 @@ section.content {
 
 .article-row .col-sm-12 {
   text-align: center; }
+
+.article-row .all_news .btn-success{
+	background-color: #396B62;
+}
+
+.article-row .all_news .btn-success:hover{
+	color: yellow;
+}
 
 /* Виджет модуля новости */
 .post_widget {

@@ -145,7 +145,7 @@ function rus_date() {
 </div>
 <div class="col-sm-12 col-xs-12">
 	<div class="all_news">
-		<a class="btn btn-success" href="<?php echo $list[0]->category_route; ?>" role="button"> Смотреть все новости... </a>
+		<a class="btn btn-success" href="<?php echo $list[0]->category_route; ?>" role="button"> Смотреть все новости</a>
 	</div>
 </div>
 

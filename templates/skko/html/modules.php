@@ -58,7 +58,7 @@ function modChrome_empty($module, &$params, &$attribs)
 function modChrome_left_block($module, &$params, &$attribs)
 {
 	if($module->content){
-		echo '<div class="col-md-4 col-sm-4">';
+		echo '<div class="col-md-3 col-sm-6">';
 		echo '<h2>';
 		echo $module->title;
 		echo '</h2>';
@@ -69,7 +69,7 @@ function modChrome_left_block($module, &$params, &$attribs)
 function modChrome_center_block($module, &$params, &$attribs)
 {
 	if($module->content){
-		echo '<div class="col-md-4 col-sm-4">';
+		echo '<div class="col-md-4 col-sm-6">';
 		echo '<h2>';
 		echo $module->title;
 		echo '</h2>';
@@ -80,7 +80,7 @@ function modChrome_center_block($module, &$params, &$attribs)
 function modChrome_right_block($module, &$params, &$attribs)
 {
 	if($module->content){
-		echo '<div class="col-md-4 col-sm-4">';
+		echo '<div class="col-md-5 col-sm-12">';
 		echo '<h2>';
 		echo $module->title;
 		echo '</h2>';
