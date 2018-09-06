@@ -182,6 +182,7 @@ class WFFileBrowser extends JObject
             $config = array(
                 'dir' => $this->get('dir'),
                 'upload_conflict' => $wf->getParam('editor.upload_conflict', 'overwrite'),
+                'upload_suffix' => $wf->getParam('editor.upload_suffix', '_copy'),
                 'filetypes' => $this->listFileTypes(),
             );
 
@@ -266,8 +267,8 @@ class WFFileBrowser extends JObject
     }
 
     public function setFileTypes($list = 'jpg,jpeg,png,gif')
-    {
-        if ($list{0} === '=') {
+    {        
+        if ($list && $list[0] === '=') {
             $list = substr($list, 1);
         }
 
@@ -371,10 +372,10 @@ class WFFileBrowser extends JObject
      *
      * @return File list array
      */
-    private function getFiles($relative, $filter = '.')
+    private function getFiles($relative, $filter = '.', $sort = '')
     {
         $filesystem = $this->getFileSystem();
-        $list = $filesystem->getFiles($relative, $filter);
+        $list = $filesystem->getFiles($relative, $filter, $sort);
 
         return $list;
     }
@@ -386,10 +387,10 @@ class WFFileBrowser extends JObject
      *
      * @return Folder list array
      */
-    private function getFolders($relative, $filter = '')
+    private function getFolders($relative, $filter = '', $sort = '')
     {
         $filesystem = $this->getFileSystem();
-        $list = $filesystem->getFolders($relative, $filter);
+        $list = $filesystem->getFolders($relative, $filter, $sort);
 
         $filters = $this->get('filter');
 
@@ -428,7 +429,7 @@ class WFFileBrowser extends JObject
      * @param int    $limit    List limit
      * @param int    $start    list start point
      */
-    public function getItems($path, $limit = 25, $start = 0, $filter = '')
+    public function getItems($path, $limit = 25, $start = 0, $filter = '', $sort = '')
     {
         $filesystem = $this->getFileSystem();
 
@@ -441,6 +442,9 @@ class WFFileBrowser extends JObject
         $path = rawurldecode($path);
 
         WFUtility::checkPath($path);
+
+        // trim leading slash
+        $path = ltrim($path, "/");
 
         // get source dir from path eg: images/stories/fruit.jpg = images/stories
         $dir = $filesystem->getSourceDir($path);
@@ -464,11 +468,11 @@ class WFFileBrowser extends JObject
         }
 
         // get file list by filter
-        $files = $this->getFiles($dir, $name . '\.(?i)(' . implode('|', $filetypes) . ')$');
+        $files = $this->getFiles($dir, $name . '\.(?i)(' . implode('|', $filetypes) . ')$', $sort);
 
         if (empty($filter) || $filter{0} != '.') {
             // get folder list
-            $folders = $this->getFolders($dir, '^(?i).*' . WFUtility::makeSafe($filter) . '.*');
+            $folders = $this->getFolders($dir, '^(?i).*' . WFUtility::makeSafe($filter) . '.*', $sort);
         }
 
         $folderArray = array();
@@ -931,13 +935,6 @@ class WFFileBrowser extends JObject
         } else {
             return $this->image('libraries.icons/def.gif');
         }
-    }
-
-    public function getFileSuffix()
-    {
-        $suffix = WFText::_('WF_MANAGER_FILE_SUFFIX');
-
-        return str_replace('WF_MANAGER_FILE_SUFFIX', '_copy', $suffix);
     }
 
     private function validateUploadedFile($file)

@@ -5,15 +5,24 @@ $app  = JFactory::getApplication();
 
 $sitename = $app->get('sitename');
 $site_logo = $templateparams->get('site_logo');
-$site_name = $templateparams->get('site_name');
-$site_desc = $templateparams->get('site_desc');
+$site_name_ru = $templateparams->get('site_name_ru');
+$site_desc_ru = $templateparams->get('site_desc_ru');
+
+$site_name_by = $templateparams->get('site_name_by');
+$site_desc_by = $templateparams->get('site_desc_by');
 //print_r($templateparams);
 
 $doc = JFactory::getDocument();
 $menu = JFactory::getApplication()->getMenu();
+$lang = $doc->getlanguage();
 
 $activePage = $menu->getActive()->id;
 $defaultPage = $menu->getDefault()->id;
+
+$itemMenu = $menu->getItem($activePage);
+
+//Проверяем является ли текущая страница главной
+$mainPage = $menu->getItem($activePage)->home == 1 ? true : false;
 
 //Подключение стилей (stylesheets)
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/favicon.png');
@@ -179,16 +188,20 @@ if ($doc->countModules('position-18'))
 			<div class="row">
 				<div class="wraper_logo">
 					<div class="col-md-3 col-sm-3 col-xs-4">
-						<?php if($activePage == $defaultPage) :?>
+						<?php if($mainPage) :?>
 							<div class="logo_img wow bounceInDown" data-wow-delay="1.5s">
 							<?php else:?>
 								<div class="logo_img">
 								<?php endif;?>
 								<a href="/">
-									<h1><?php echo $site_name ?  $site_name : 'СККО'?></h1>
+									<?php if ($lang =='ru-ru'):?>
+									<h1><?php echo $site_name_ru ?  $site_name_ru : 'СККО'?></h1>
+									<?php else:?>
+									<h1><?php echo $site_name_by ?  $site_name_by : 'СККА'?></h1>
+								<?php endif;?>
 								</a>
 							</div>
-							<?php if($activePage == $defaultPage) :?>
+							<?php if($mainPage) :?>
 								<div class="phones wow fadeInLeft" data-wow-delay="2s">
 								<?php else:?>
 									<div class="phones">
@@ -200,18 +213,28 @@ if ($doc->countModules('position-18'))
 							</div>
 							<div class="col-md-9 col-sm-9 col-xs-8">
 								<div class="logo_text">
-									<?php if($activePage == $defaultPage) :?>
+									<?php if($mainPage) :?>
 										<div class="greeting wow bounceInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
 										<?php else:?>
 											<div class="greeting">
 											<?php endif;?>
 											<div class="row">
 												<div class="col-md-9 col-sm-9">
-													<h3>
-														<?php echo $site_desc ?  $site_desc :'Система контроля кассового оборудования'?>
+													<?php if ($lang =='ru-ru'):?>
+														<h3>
+														<?php echo $site_desc_ru ?  $site_desc_ru :'Система контроля кассового оборудования'?>
 													</h3>
-													<span id="slog">Управляйте своим бизнесом через Internet</span>
+													<?php else:?>
+														<h3>
+														<?php echo $site_desc_by ?  $site_desc_by :'Сістэма кантролю касавага абсталявання'?>
+													</h3>
+													<?php endif;?>
+													<a href="<?php echo JRoute::_('&template=beez3'); ?>">Версия для слабовидящих</a>
+													<span id="slog"><?php echo JText::_('TPL_SKKO_FIELD_SITE_SLOGAN') ?></span>
+
 												</div>
+
+
 
 												<!-- Кнопки Войти с ЭЦП и Почта -->
 												<?php if ($showButtons):?>
@@ -266,8 +289,12 @@ if ($doc->countModules('position-18'))
 								<!-- Блок Банеров!!! -->
 								<jdoc:include type="modules" name="position-5" style="default"/>
 							</div>
-						<?php endif;?>
-						<?php if($activePage != $defaultPage) :?>
+							<?php endif;?>
+						
+									
+						
+						<?php if (!$mainPage): ?>		<!-- // Если текущая страница не является главной -->			
+													
 							<div class="row main_content">
 								<?php if($showBreadcrumbs):?>
 									<div class="col-md-12">
@@ -311,6 +338,7 @@ if ($doc->countModules('position-18'))
 									</div>
 								<?php endif;?>
 							</div><!-- /.row main_content -->
+
 						<?php else :?>
 							<div class="row">
 								<div class="modules">
@@ -320,6 +348,7 @@ if ($doc->countModules('position-18'))
 								</div><!-- /.modules -->
 							</div><!-- /.row -->
 						<?php endif;?>
+
 						<?php if($showRowModules): ?>
 							<div class="row part_links">
 								<?php if($showLeftModule): ?>
@@ -401,7 +430,34 @@ if ($doc->countModules('position-18'))
 <script type="text/javascript" src="<?php echo JUri::base();?>templates/<?php echo $doc->template; ?>/js/wow.min.js"></script>
 <script type="text/javascript" src="<?php echo JUri::base();?>templates/<?php echo $doc->template; ?>/js/common.js"></script>
 
-<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47268396 = new Ya.Metrika({
+                    id:47268396,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47268396" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
 </html>

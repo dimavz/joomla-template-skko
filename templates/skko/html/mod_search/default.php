@@ -22,7 +22,7 @@ JHtml::_('script', 'system/html5fallback.js', array('version' => 'auto', 'relati
 				<label class="sr-only" for="mod-search-searchword<?php echo $module->id ?>">Поиск</label>
 				<div class="input-group">
 					<input name="searchword" type="search" class="form-control" id="mod-search-searchword<?php echo $module->id ?>" placeholder="<?php echo $text ?>" size="150" width="250px">
-					<button class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();">Найти</button>
+					<button class="input-group-addon btn btn-info" type="submit" onclick="this.form.searchword.focus();"><?php echo JText::_('TPL_SKKO_MOD_SEARCH_BUTTON'); ?></button>
 				</div><!-- end /.input-group -->
 			</div><!-- end /.form-group -->
 	

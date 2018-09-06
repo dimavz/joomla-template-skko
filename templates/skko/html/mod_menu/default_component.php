@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 $attributes = array();
-//print_r($item);
+// print_r($item);
 
 if ($item->anchor_title)
 {
@@ -26,7 +26,7 @@ if ($item->anchor_rel)
 {
 	$attributes['rel'] = $item->anchor_rel;
 }
-if ($item->route =='home')
+if ($item->route =='home'|| $item->route =='home-by')
 {
 	$linktype = '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>'.$item->title;
 }

@@ -9,6 +9,10 @@
 
 defined('_JEXEC') or die;
 $fl=true;
+
+$doc = JFactory::getDocument();
+$lang = $doc->getlanguage();
+// echo $lang;
 // Функция руссификации даты
 function rus_date() {
 // Перевод
@@ -69,6 +73,67 @@ function rus_date() {
 		return strtr(date(func_get_arg(0)), $translate);
 	}
 }
+
+// Функция белоруссификации даты
+function bel_date() {
+// Перевод
+	$translate = array(
+		"am" => "дп",
+		"pm" => "пп",
+		"AM" => "ДП",
+		"PM" => "ПП",
+		"Monday" => "Панядзелак",
+		"Mon" => "Пн",
+		"Tuesday" => "Аўторак",
+		"Tue" => "Аўт",
+		"Wednesday" => "Серада",
+		"Wed" => "Ср",
+		"Thursday" => "Чацвер",
+		"Thu" => "Чт",
+		"Friday" => "Пятніца",
+		"Fri" => "Пт",
+		"Saturday" => "Субота",
+		"Sat" => "Сб",
+		"Sunday" => "Нядзеля",
+		"Sun" => "Нд",
+		"January" => "Студзеня",
+		"Jan" => "Студ",
+		"February" => "Лютага",
+		"Feb" => "Лют",
+		"March" => "Сакавіка",
+		"Mar" => "Сак",
+		"April" => "Красавіка",
+		"Apr" => "Крас",
+		"May" => "Мая",
+		"May" => "Мая",
+		"June" => "Чэрвеня",
+		"Jun" => "Чэр",
+		"July" => "Ліпеня",
+		"Jul" => "Ліп",
+		"August" => "Жніўня",
+		"Aug" => "Жніў",
+		"September" => "Верасня",
+		"Sep" => "Вер",
+		"October" => "Кастрычніка",
+		"Oct" => "Кас",
+		"November" => "Лістапада",
+		"Nov" => "Ліст",
+		"December" => "Снежня",
+		"Dec" => "Снеж",
+		"st" => "ое",
+		"nd" => "ое",
+		"rd" => "е",
+		"th" => "ое"
+		);
+ // если передали дату, то переводим ее
+	if (func_num_args() > 1) {
+		$timestamp = func_get_arg(1);
+		return strtr(date(func_get_arg(0), $timestamp), $translate);
+	} else {
+// иначе текущую дату
+		return strtr(date(func_get_arg(0)), $translate);
+	}
+}
 //print_r($list);
 ?>
 <?php $countNews = 1; ?>
@@ -92,7 +157,14 @@ function rus_date() {
 									<?php echo date("d",strtotime($item->publish_up)); ?>
 								</span>
 								<span class="month">
-									<?php echo $month = rus_date("F", strtotime($item->publish_up)); ?>
+									<?php 
+									if ($lang=='ru-ru'){
+										echo $month = rus_date("F", strtotime($item->publish_up));
+									}
+									elseif($lang=='be-by'){
+										echo $month = bel_date("F", strtotime($item->publish_up));
+									} 
+									?>
 								</span>
 								<span class="year">
 									<?php echo date("Y",strtotime($item->publish_up)); ?>
@@ -131,7 +203,22 @@ function rus_date() {
 						<a href="<?php echo $item->link?>"><?php echo $item->title?></a>
 					</h3>
 					<div class="article_data">
-						<?php echo JText::sprintf(JHtml::_('date', $item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?>
+
+						<?php  
+							if ($lang=='ru-ru'){
+								$day = rus_date("j", strtotime($item->publish_up));
+								$month = rus_date("F", strtotime($item->publish_up));
+								$year = rus_date("o", strtotime($item->publish_up));
+								echo $day.' '.$month.' '.$year;
+							}
+							elseif($lang=='be-by'){
+								$day = bel_date("j", strtotime($item->publish_up));
+								$month = bel_date("F", strtotime($item->publish_up));
+								$year = bel_date("o", strtotime($item->publish_up));
+								echo $day.' '.$month.' '.$year;
+							}
+						?>
+						<!-- <?php echo JText::sprintf(JHtml::_('date', $item->publish_up, JText::_('DATE_FORMAT_LC3'))); ?> -->
 					</div>
 				</div>
 				<div class="article_post">
@@ -145,7 +232,7 @@ function rus_date() {
 </div>
 <div class="col-sm-12 col-xs-12">
 	<div class="all_news">
-		<a class="btn btn-success" href="<?php echo $list[0]->category_route; ?>" role="button"> Смотреть все новости</a>
+		<a class="btn btn-success" href="<?php echo $list[0]->category_route; ?>" role="button"><?php echo JText::_('TPL_SKKO_MOD_NEWS_BUTTON'); ?></a>
 	</div>
 </div>
 

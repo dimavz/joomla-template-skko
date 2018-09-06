@@ -4,6 +4,10 @@
 # @license    GNU General Public License version 2 or later; see LICENSE.txt
 ##
 
+##Разрешение для загрузки файлов
+php_value post_max_size 20M
+php_value upload_max_filesize 20M
+
 ##
 # READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
 #

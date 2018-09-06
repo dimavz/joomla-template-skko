@@ -251,6 +251,14 @@ ul.profil_menu li i {
 #header_topline a:hover {
   color: yellow; }
 
+#header_topline .container .row .mod-languages{
+float: right;
+}
+
+#header_topline .container .row .mod-languages .advancedSelect{
+color:black;
+}
+
 li.link a:hover {
   text-decoration: none; }
 

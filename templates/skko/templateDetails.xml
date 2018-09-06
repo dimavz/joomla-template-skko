@@ -64,15 +64,26 @@
 					description="TPL_SKKOINFO_FIELD_SITELOGO_DESC">
 				</field>
 				
-				<field name="site_name" 
+				<field name="site_name_ru" 
 					type="text" 
-					label="TPL_SKKOINFO_FIELD_SITENAME" 
+					label="TPL_SKKOINFO_FIELD_SITENAME_RU" 
+					description="TPL_SKKOINFO_FIELD_SITENAME_DESC_RU">
+				</field>
+				
+				<field name="site_desc_ru" 
+					type="textarea" 
+					label="TPL_SKKOINFO_FIELD_SITEDESC_RU" 
+					description="TPL_SKKOINFO_FIELD_SITEDESC_DESC_RU">
+				</field>
+				<field name="site_name_by" 
+					type="text" 
+					label="TPL_SKKOINFO_FIELD_SITENAME_BY" 
 					description="TPL_SKKOINFO_FIELD_SITENAME_DESC">
 				</field>
 				
-				<field name="site_desc" 
+				<field name="site_desc_by" 
 					type="textarea" 
-					label="TPL_SKKOINFO_FIELD_SITEDESC" 
+					label="TPL_SKKOINFO_FIELD_SITEDESC_BY" 
 					description="TPL_SKKOINFO_FIELD_SITEDESC_DESC">
 				</field>
 				
