@@ -134,7 +134,7 @@ function bel_date() {
 		return strtr(date(func_get_arg(0)), $translate);
 	}
 }
-//print_r($list);
+// print_r($list);
 ?>
 <?php $countNews = 1; ?>
 <?php foreach ($list as $item) : ?>

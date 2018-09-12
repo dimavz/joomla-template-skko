@@ -94,6 +94,10 @@ body {
   margin-left: 0px;
   margin-top: 5px; }
 
+.bannergroup{
+  margin-top: 10px;
+}
+
 #accordion .panel-info > .panel-heading {
   background-color: #396B62;
   border-color: #fff;
@@ -235,6 +239,12 @@ ul.profil_menu li i {
  #header_topline .container .row ul li.active a {
   color: yellow; }
 
+  #header_topline .container .row a i {
+  float: right;
+  margin-right: 120px;
+  margin-top: -38px;
+} 
+
 #header_topline .dropdown-menu > .active > a {
   background-color: #396B62;
   color: yellow; }
@@ -257,6 +267,8 @@ float: right;
 
 #header_topline .container .row .mod-languages .advancedSelect{
 color:black;
+float: right;
+margin-top: -35px;
 }
 
 li.link a:hover {
@@ -482,7 +494,7 @@ li.link a:hover {
   }
 
 .top_header {
-  background-color: #4EC698; }
+  background-color: #396B62; }
 
 .main_adsense {
   color: #1d1d1d;
@@ -508,13 +520,14 @@ li.link a:hover {
   margin-right: -15px;
   margin-left: -15px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   /*margin-top: 10px;*/
-  -webkit-border-radius: 0.3em;
-          border-radius: 0.3em;
+  -webkit-border-radius: 0.1em;
+          border-radius: 0.1em;
   -webkit-box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-  border: 1px solid #fff; }
+  /*border: 1px solid #fff; */
+}
 
 nav.main_menu.stickytop {
   position: fixed;
@@ -1046,8 +1059,8 @@ section.content {
   height: 150px; }
 
 .part_links {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: #4EC698 3px solid;
   -webkit-border-radius: 0.3em;
           border-radius: 0.3em;
@@ -1307,12 +1320,12 @@ section.content {
   color: yellow; }
 
 .footer_subscribe {
-  background-color: #1d1d1d;
-  padding: 10px 0;
+  background-color: #396B62;
+  padding: 5px 0;
   color: #fff;
-  min-height: 20px;
+  /*min-height: 10px;*/
   text-align: center;
-  border-bottom: 1px dashed #fff; }
+  /*border-bottom: 1px dashed #fff;*/ }
 
 .footer_subscribe form {
   /*margin-left: 250px;*/ }
@@ -1412,7 +1425,8 @@ section.content {
   color: #fff;
   min-height: 20px;
   text-align: center;
-  border-top: 1px dashed #fff; }
+  /*border-top: 1px dashed #fff; */
+}
 
 .footer_bottomline span {
   font-size: 14px; }

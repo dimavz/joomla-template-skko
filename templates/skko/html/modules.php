@@ -156,24 +156,24 @@ function modChrome_phones($module, &$params, &$attribs)
 	}
 }
 
-function modChrome_button_ecp($module, &$params, &$attribs)
-{
-	if($module->content){
-		echo '<a class="btn btn-success " href="https://skko.by/" role="button">
-		<i class="fa fa-key" aria-hidden="true"></i>';
-		echo strip_tags($module->content);
-		echo '</a>';
-	}
-}
+// function modChrome_button_ecp($module, &$params, &$attribs)
+// {
+// 	if($module->content){
+// 		echo '<a class="btn btn-success " href="https://skko.by/" role="button">
+// 		<i class="fa fa-key" aria-hidden="true"></i>';
+// 		echo strip_tags($module->content);
+// 		echo '</a>';
+// 	}
+// }
 
-function modChrome_button_mail($module, &$params, &$attribs)
-{
-	if($module->content){
-		echo '<a class="btn btn-success " href="http://inbox.skko.by/" role="button"><i class="fa fa-envelope" aria-hidden="true"></i>';
-		echo strip_tags($module->content);
-		echo '</a>';
-	}
-}
+// function modChrome_button_mail($module, &$params, &$attribs)
+// {
+// 	if($module->content){
+// 		echo '<a class="btn btn-success " href="http://inbox.skko.by/" role="button"><i class="fa fa-envelope" aria-hidden="true"></i>';
+// 		echo strip_tags($module->content);
+// 		echo '</a>';
+// 	}
+// }
 
 function modChrome_message($module, &$params, &$attribs)
 {

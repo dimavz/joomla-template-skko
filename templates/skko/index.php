@@ -180,6 +180,7 @@ if ($doc->countModules('position-18'))
 					<?php if($showMenu):?>
 						<!-- Модуль Меню -->
 						<jdoc:include type="modules" name="position-4" style="default"/>
+						<a href="<?php echo JRoute::_('&template=accessibility'); ?>" title='<?php echo JText::_('TPL_SKKO_FIELD_VERSION_EYES') ?>'><i class="fa fa-low-vision fa-2x" aria-hidden="true"></i></a>
 					<?php endif;?>
 				</div><!-- /.row -->
 			</div><!-- /.container -->
@@ -229,7 +230,6 @@ if ($doc->countModules('position-18'))
 														<?php echo $site_desc_by ?  $site_desc_by :'Сістэма кантролю касавага абсталявання'?>
 													</h3>
 													<?php endif;?>
-													<a href="<?php echo JRoute::_('&template=beez3'); ?>">Версия для слабовидящих</a>
 													<span id="slog"><?php echo JText::_('TPL_SKKO_FIELD_SITE_SLOGAN') ?></span>
 
 												</div>
