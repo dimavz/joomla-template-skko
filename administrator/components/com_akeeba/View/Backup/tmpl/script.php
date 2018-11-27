@@ -90,7 +90,7 @@ else
 	akeeba.System.addEventListener(document.getElementById('backup-default'), 'click', akeeba.Backup.restoreDefaultOptions);
 
 	// Work around Safari which ignores autocomplete=off (FOR CRYING OUT LOUD!)
-	setTimeout('akeeba.Backup.restoreCurrentOptions();', 500);
+	setTimeout(akeeba.Backup.restoreCurrentOptions, 500);
 
 JS;
 }

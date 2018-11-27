@@ -79,15 +79,6 @@ class Manage extends Controller
 			return;
 		}
 
-		// For a certain unmentionable browser -- Thank you, Nooku, for the tip
-		if (function_exists('ini_get') && function_exists('ini_set'))
-		{
-			if (ini_get('zlib.output_compression'))
-			{
-				ini_set('zlib.output_compression', 'Off');
-			}
-		}
-
 		// Remove php's time limit
 		if (function_exists('ini_get') && function_exists('set_time_limit'))
 		{

@@ -27,18 +27,12 @@ abstract class Ru_RULocalise
 	 */
 	public static function getPluralSuffixes($count)
 	{
-		if ($count == 0)
-		{
-			return array('0');
+		if ($count == 0) {
+			$return = array('0');
+		} else {
+			$return = array(($count%10==1 && $count%100!=11 ? '1' : ($count%10>=2 && $count%10<=4 && ($count%100<10 || $count%100>=20) ? '2' : 'MORE')));
 		}
-		elseif ($count == 1)
-		{
-			return array('1');
-		}
-		else
-		{
-			return array('MORE');
-		}
+		return $return;
 	}
 
 	/**

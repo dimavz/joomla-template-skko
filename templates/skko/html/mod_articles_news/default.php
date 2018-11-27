@@ -135,9 +135,12 @@ function bel_date() {
 	}
 }
 // print_r($list);
+$catLink = ''; //Переменная для хранения ссылки на категорию
 ?>
 <?php $countNews = 1; ?>
 <?php foreach ($list as $item) : ?>
+	<?php $arrLinkCat = preg_split("/[\d,]+/", $item->link);?>
+	<?php $catLink = $arrLinkCat[0]; ?>
 	<?php if ($countNews == 1): ?>
 		<div class="col-md-6 col-sm-12 col-xs-12">
 			<div class="article_main_widget">
@@ -232,7 +235,7 @@ function bel_date() {
 </div>
 <div class="col-sm-12 col-xs-12">
 	<div class="all_news">
-		<a class="btn btn-success" href="<?php echo $list[0]->category_route; ?>" role="button"><?php echo JText::_('TPL_SKKO_MOD_NEWS_BUTTON'); ?></a>
+		<a class="btn btn-success" href="<?php echo $catLink; ?>" role="button"><?php echo JText::_('TPL_SKKO_MOD_NEWS_BUTTON'); ?></a>
 	</div>
 </div>
 

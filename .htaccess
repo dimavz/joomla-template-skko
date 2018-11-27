@@ -8,6 +8,10 @@
 php_value post_max_size 20M
 php_value upload_max_filesize 20M
 
+## Делаем переадресацию с домена www на домен без www для уменьшения дублей страниц
+RewriteCond %{HTTP_HOST} ^www\.skko\.by$ [NC]
+RewriteRule ^(.*)$ http://skko.by/$1 [R=301,L]
+
 ##
 # READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
 #

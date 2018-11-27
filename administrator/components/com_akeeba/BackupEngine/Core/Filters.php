@@ -81,8 +81,7 @@ class Filters extends BaseObject
 				}
 
 				// PHP 5.3.5 and earlier do not support getExtension
-				//if ($file->getExtension() != 'php')
-				if (substr($file->getBasename(), -4) != '.php')
+				if ($file->getExtension() != 'php')
 				{
 					continue;
 				}

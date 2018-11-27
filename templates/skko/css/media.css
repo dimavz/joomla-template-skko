@@ -1,9 +1,15 @@
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+
+    #header_topline .container .row ul li {
+        margin-right: 5px;
+    }
+    
     .top_header {
         height: 210px;
     }
+
 
     .logo_text {
         display: block;
@@ -182,6 +188,15 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
 
+    #header_topline .container .row a i {
+      margin-top: -33px;
+      z-index: 1000;
+  }
+
+    #header_topline .container .row .mod-languages .advancedSelect{
+        margin-top: -30px;
+    }
+
     .owl-carousel .owl-stage-outer {
         position: absolute;
         left: 77px;
@@ -195,6 +210,7 @@
     #header_topline .container .row ul {
         font-size: 14px;
     }
+
 
     .logo_img {
         width: 200px;
@@ -395,7 +411,7 @@
         color: #fff;
     }
 
-    .contacts_content {
+    .footer_right_block .blank {
         display: none;
     }
 
@@ -538,11 +554,12 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
 
+
     #header_topline .run_str {
         position: absolute;
         top: 15px;
         margin-left: 50px;
-        width: 80%;
+        width: 65%;
         color: #06FC23;
     }
 
@@ -685,8 +702,14 @@
         height: 50px;
     }
 
+    .footer_right_block {
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+    }
+
     .footer_right_block h3 {
         height: 50px;
+        width: 100%;
     }
 
     .footer_left_block a {
@@ -850,6 +873,10 @@
 }
 
 @media only screen and (max-width: 640px) {
+
+    #header_topline .run_str {
+        width: 45%;
+    }
 
     .owl-carousel .owl-stage-outer {
         position: absolute;
@@ -1501,7 +1528,7 @@
                     display: block!important;
                 }
 
-                .contacts_content {
+                .blank {
                     display: block !important;
                 }
 

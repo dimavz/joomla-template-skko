@@ -41,7 +41,7 @@ akeeba.System.documentReady(function(){
 	setTimeout(function ()
 	{
 		// Work around browsers which blatantly ignore autocomplete=off
-		setTimeout('akeeba.Configuration.restoreDefaultPasswords();', 1000);
+		setTimeout(akeeba.Configuration.restoreDefaultPasswords, 1000);
 
 		// Render the configuration UI in the timeout to prevent Safari from auto-filling the password fields
 		akeeba.Configuration.parseConfigData(data);

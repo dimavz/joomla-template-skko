@@ -36,7 +36,7 @@ $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/font-awesome.
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/custom.css');
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/main.css');
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/media.css');
-$doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/animate.min.css');
+// $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/animate.min.css');
 
 // Отключение стандартных скриптов Joomla (Конфликтуют с подключаемыми скриптами шаблона)
 JHtml::_('jquery.framework');
@@ -142,7 +142,7 @@ if ($doc->countModules('position-18'))
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="ru">
+<html lang="ru" id="goToUp">
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
@@ -154,7 +154,7 @@ if ($doc->countModules('position-18'))
 </head>
 <body>
 	<header class="top_header">
-		<div class="top_main_menu hidden-sm hidden-md hidden-lg">
+		<div class="top_main_menu  hidden-md hidden-lg">
 			<!-- search module -->
 			<?php if($showMobileSearch):?>
 				<div class="form_search">
@@ -169,7 +169,7 @@ if ($doc->countModules('position-18'))
 		<nav id="header_topline" class="navbar navbar-fixed-top">
 			<div class="container">
 				<div class="row">
-					<div id="top" class="menu_icon visible-xs-block">						<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+					<div id="top" class="menu_icon visible-xs-block visible-sm-block">						<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 					</div>
 					<?php if($showMessage):?>
 						<div class="run_str display-xs-block hidden-sm hidden-md hidden-lg">
@@ -180,7 +180,10 @@ if ($doc->countModules('position-18'))
 					<?php if($showMenu):?>
 						<!-- Модуль Меню -->
 						<jdoc:include type="modules" name="position-4" style="default"/>
-						<a href="<?php echo JRoute::_('&template=accessibility'); ?>" title='<?php echo JText::_('TPL_SKKO_FIELD_VERSION_EYES') ?>'><i class="fa fa-low-vision fa-2x" aria-hidden="true"></i></a>
+						<a href="<?php echo JRoute::_('&template=myaccessibility'); ?>" title='<?php echo JText::_('TPL_SKKO_FIELD_VERSION_EYES') ?>'>
+							<i class="fa fa-low-vision fa-2x" aria-hidden="true"></i>
+						</a>
+						<jdoc:include type="modules" name="lang" style="default"/>
 					<?php endif;?>
 				</div><!-- /.row -->
 			</div><!-- /.container -->
@@ -194,13 +197,11 @@ if ($doc->countModules('position-18'))
 							<?php else:?>
 								<div class="logo_img">
 								<?php endif;?>
-								<a href="/">
 									<?php if ($lang =='ru-ru'):?>
 									<h1><?php echo $site_name_ru ?  $site_name_ru : 'СККО'?></h1>
 									<?php else:?>
 									<h1><?php echo $site_name_by ?  $site_name_by : 'СККА'?></h1>
 								<?php endif;?>
-								</a>
 							</div>
 							<?php if($mainPage) :?>
 								<div class="phones wow fadeInLeft" data-wow-delay="2s">
@@ -315,7 +316,7 @@ if ($doc->countModules('position-18'))
 									<div class="col-md-3">
 										<!-- Модули Сайдбара -->
 										<div class="block_sidebar">
-											<jdoc:include type="modules" name="position-8"/>
+											<jdoc:include type="modules" name="position-8" style="sidebarmenu"/>
 										</div>	
 									</div>
 									<div class="clearfix"></div>
@@ -405,6 +406,11 @@ if ($doc->countModules('position-18'))
 					</div>
 				</footer>
 				<div class="hidden">
+				</div>
+				<div id="top_up">
+						<a href="#goToUp" class="flowing-scroll other-class">
+							<i class="fa fa-angle-double-up fa-4x" aria-hidden="true"></i>
+						</a>
 				</div>
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>

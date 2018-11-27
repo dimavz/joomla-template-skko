@@ -32,14 +32,14 @@ class JConfig {
 	public $ftp_root = '';
 	public $ftp_user = '';
 	public $gzip = '0';
-	public $helpurl = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
+	public $helpurl = '';
 	public $host = 'localhost';
 	public $lifetime = '30';
 	public $list_limit = '20';
 	public $live_site = '';
 	public $log_path = 'G:/OpenServer/domains/skko.loc/administrator/logs';
 	public $mailer = 'mail';
-	public $mailfrom = 'admin@skko.by';
+	public $mailfrom = 'admin@skno.by';
 	public $memcache_compress = '0';
 	public $memcache_persist = '1';
 	public $memcache_server_host = 'localhost';
@@ -51,7 +51,7 @@ class JConfig {
 	public $offset_user = 'UTC';
 	public $password = '12345';
 	public $robots = '';
-	public $secret = 'qmsG64w0I1BbeZsJr359naRXthMTZFl3';
+	public $secret = 'RsM5WbBfEnjFvNLZ63ng8dqCLNKmFO6Q';
 	public $sef = '1';
 	public $sef_rewrite = '1';
 	public $sef_suffix = '0';

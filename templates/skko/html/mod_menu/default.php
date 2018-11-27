@@ -18,7 +18,7 @@ if ($tagId = $params->get('tag_id', ''))
 
 // The menu class is deprecated. Use nav instead
 ?>
-<ul class="hidden-xs">
+<ul class="hidden-sm hidden-xs">
 <?php foreach ($list as $i => &$item)
 {
 	//print_r($item);

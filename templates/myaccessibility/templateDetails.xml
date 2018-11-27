@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>MYACCESSIBILITY</name>
+	<version>1.0.1</version>
+	<creationDate>09.08.2017</creationDate>
+	<author>Dmitry Zatulenka</author>
+	<authorEmail>zatulenko@gmail.com</authorEmail>
+	<authorUrl>http://SKKO.BY</authorUrl>
+	<copyright>Copyright (C) SKKO.BY</copyright>
+	<license>TPL_MYACCESSIBILITY_LICENCE</license>
+	<description>TPL_MYACCESSIBILITY_DESCRIPTION</description>
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>libs</folder>
+		
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>template_preview.png</filename>
+	</files>
+	<positions>
+		<position>lang</position>		
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>position-16</position>
+		<position>position-17</position>
+		<position>position-18</position>
+	</positions>
+	<languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_myaccessibility.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_myaccessibility.sys.ini</language>
+        
+		<language tag="en-GB">en-GB/en-GB.tpl_myaccessibility.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_myaccessibility.sys.ini</language>
+		
+		<language tag="be-BY">be-BY/be-BY.tpl_myaccessibility.ini</language>
+        <language tag="be-BY">be-BY/be-BY.tpl_myaccessibility.sys.ini</language>
+	</languages>
+	
+	<config>		
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="site_name_ru" 
+					type="text" 
+					label="TPL_MYACCESSIBILITY_FIELD_SITENAME_RU" 
+					description="TPL_MYACCESSIBILITY_FIELD_SITENAME_DESC_RU">
+				</field>
+				
+				<field name="site_desc_ru" 
+					type="textarea" 
+					label="TPL_MYACCESSIBILITY_FIELD_SITEDESC_RU" 
+					description="TPL_MYACCESSIBILITY_FIELD_SITEDESC_DESC_RU">
+				</field>
+				<field name="site_name_by" 
+					type="text" 
+					label="TPL_MYACCESSIBILITY_FIELD_SITENAME_BY" 
+					description="TPL_MYACCESSIBILITY_FIELD_SITENAME_DESC">
+				</field>
+				
+				<field name="site_desc_by" 
+					type="textarea" 
+					label="TPL_MYACCESSIBILITY_FIELD_SITEDESC_BY" 
+					description="TPL_MYACCESSIBILITY_FIELD_SITEDESC_DESC">
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

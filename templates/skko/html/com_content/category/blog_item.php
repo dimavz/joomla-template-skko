@@ -20,10 +20,11 @@ $item = $this->item;
 </div>
 <div class="post_category">
 	<span class="category">
-		<a href="<?php echo $item->category_route;?>">
+		<?php echo JLayoutHelper::render('joomla.content.info_block.category', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
+<!-- 		<a href="<?php echo $item->category_route;?>">
 			<i class="fa fa-hashtag" aria-hidden="true"></i>
 			<?php echo $item->category_title;?>
-		</a>
+		</a> -->
 	</span>
 	<div class="btn-group" role="group">
 		<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>

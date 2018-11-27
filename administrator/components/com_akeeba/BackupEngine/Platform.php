@@ -215,7 +215,22 @@ class Platform
 					continue;
 				}
 
+				if ($file->getExtension() !== 'php')
+				{
+					continue;
+				}
+
 				$shortName = $file->getFilename();
+				$bareName = basename($shortName, '.php');
+
+				/**
+				 * We never have dots in our filenames but some hosts will rename files similar to  foo.1.php when their
+				 * broken security scanners detect a false positive. This is our defence against that.
+				 */
+				if (strpos($bareName, '.') !== false)
+				{
+					continue;
+				}
 
 				static::$knownPlatformsDirectories[$shortName] = $file->getRealPath();
 			}

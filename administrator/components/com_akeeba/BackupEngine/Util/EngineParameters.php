@@ -343,8 +343,7 @@ class EngineParameters
 				}
 
 				// PHP 5.3.5 and earlier do not support getExtension
-				// if ($file->getExtension() !== 'ini')
-				if (substr($file->getBasename(), -4) != '.ini')
+				if ($file->getExtension() !== 'ini')
 				{
 					continue;
 				}
@@ -421,8 +420,7 @@ class EngineParameters
 				}
 
 				// PHP 5.3.5 and earlier do not support getExtension
-				// if ($file->getExtension() !== 'ini')
-				if (substr($file->getBasename(), -4) != '.ini')
+				if ($file->getExtension() !== 'ini')
 				{
 					continue;
 				}
@@ -506,8 +504,7 @@ class EngineParameters
 				}
 
 				// PHP 5.3.5 and earlier do not support getExtension
-				// if ($file->getExtension() !== 'ini')
-				if (substr($file->getBasename(), -4) != '.ini')
+				if ($file->getExtension() !== 'ini')
 				{
 					continue;
 				}
@@ -603,8 +600,7 @@ class EngineParameters
 				}
 
 				// PHP 5.3.5 and earlier do not support getExtension
-				// if ($file->getExtension() !== 'ini')
-				if (substr($file->getBasename(), -4) != '.ini')
+				if ($file->getExtension() !== 'ini')
 				{
 					continue;
 				}

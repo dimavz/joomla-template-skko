@@ -10,12 +10,15 @@
 defined('_JEXEC') or die;
 
 
-//echo '<div>';
+echo '
+<div class="blank" >
+    <div id="holder' . $modno_bm . '">
+        <div id="inner' . $modno_bm . '">';
 
 // contentselection/order
 
 $codeeditor = '
-            <div class="blank">
+            <div>
                 ' . $codeeditor . '
             </div>';
 $article = '
@@ -77,4 +80,7 @@ if ($content3 == 2) {
 if ($content3 == 3) {
     echo $article;
 }
-//echo '</div>';
+echo '
+        </div>
+    </div>
+</div>';

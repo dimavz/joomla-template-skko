@@ -37,7 +37,7 @@ $(document).ready(function() {
 	});
 
 	$(".contacts").click(function(){
-		$(".contacts_content").slideToggle();
+		$(".blank").slideToggle();
 	});
 
 	$(".menu_button").click(function(){
@@ -140,15 +140,6 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-
-    // owl.on('mouseover', function (e) {
-    //     owl.trigger('stop.owl.autoplay');
-    // });
-
-    // owl.on('mouseout', function (e) {
-    //     owl.trigger('next.owl');
-    // });
-
    	//При убирании мыши со слайдера запуск воспроизведения слайдов
     owl.mouseout(function() {
         owl.trigger('play.owl.autoplay');
@@ -177,27 +168,52 @@ $(document).ready(function() {
 	//Документация:
 	//http://api.jquery.com/scrolltop/
 	//http://api.jquery.com/animate/
-	$("#top").click(function () {
-		$("body, html").animate({
-			scrollTop: 0
-		}, 800);
-		return false;
-	});
+	// $("#top").click(function () {
+	// 	$("body").animate({
+	// 		scrollTop: 0
+	// 	}, 500);
+	// 	return false;
+	// });
 	
 	
  // Фитксация главного меню
- var $menu = $("main_menu");
+ // var $menu = $("main_menu");
 
- $(window).scroll(function(){
- 	var top = $(this).scrollTop();
- 	if ( top >= 100){
- 		$menu.addClass('stickytop');
- 		console.log('stickytop');
- 	} 
- 	else {
- 		$menu.removeClass('stickytop');
- 	}
- });
+ // $(window).scroll(function(){
+ // 	var top = $(this).scrollTop();
+ // 	if ( top >= 100){
+ // 		$menu.addClass('stickytop');
+ // 		console.log('stickytop');
+ // 	} 
+ // 	else {
+ // 		$menu.removeClass('stickytop');
+ // 	}
+ // });
+
+//Прокрутка вверх при клике на кнопку
+$('.flowing-scroll').on( 'click', function(){ 
+	var el = $(this);
+    var dest = el.attr('href'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+    	$('html').animate({ 
+            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+        }, 500 // скорость прокрутки
+        );
+    }
+    return false;
+  });
+
+// Скрытие-Отображение кнопки прокрутки Вверх
+$(window).scroll(function (event) {
+    var top = $(window).scrollTop();
+     if(top >= 50){
+     //show btn
+     $("#top_up").css("display", "block");
+     } else {
+     //hide btn
+     $("#top_up").css("display", "none");
+     }
+});
 
 });
 

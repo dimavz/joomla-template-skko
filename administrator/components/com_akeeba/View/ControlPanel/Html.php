@@ -268,7 +268,7 @@ JS;
 			switch ($type)
 			{
 				case '=':
-					continue;
+					continue 2;
 					break;
 
 				case '+':

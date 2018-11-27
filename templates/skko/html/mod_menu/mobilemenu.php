@@ -13,6 +13,8 @@ $countItem = 1;
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	<?php foreach ($list as $i => &$item)
 	{
+		// print_r($item);
+		// exit();
 		if($item->level ==1)
 		{
 			echo '<div class="panel panel-info">';
@@ -20,7 +22,14 @@ $countItem = 1;
 			echo '<h4 class="panel-title">';
 			if(!empty($item->link))
 			{
-				echo '<a href="'.$item->route.'">';
+				if($item->language =='be-BY'){
+					echo '<a href="be/'.$item->route.'">';
+				}
+				else{
+					echo '<a href="'.$item->route.'">';
+				}
+				// echo $item->route;
+				// exit();
 				echo $item->title;
 				echo '</a>';
 				echo '</h4></div></div>';
@@ -37,7 +46,13 @@ $countItem = 1;
 		else
 		{
 			echo '<li>';
-			echo '<a href="'.$item->route.'">';
+			if($item->language =='be-BY'){
+					echo '<a href="be/'.$item->route.'">';
+				}
+				else{
+					echo '<a href="'.$item->route.'">';
+				}
+			// echo '<a href="'.$item->route.'">';
 			echo $item->title;
 			echo '</a>';
 			echo '</li>';

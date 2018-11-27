@@ -31,7 +31,7 @@ function akeeba_confwiz_modal_open()
 };
 
 akeeba.System.documentReady(function(){
-	setTimeout('akeeba_confwiz_modal_open();', 500);
+	setTimeout(akeeba_confwiz_modal_open, 500);
 });
 
 JS;
